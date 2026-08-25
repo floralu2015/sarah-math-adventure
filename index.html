@@ -17,16 +17,49 @@ main{max-width:1180px;margin:auto;padding:0 18px 70px}nav{position:sticky;top:6p
 .textbook-page{max-width:900px;margin:18px auto;background:var(--paper);border:1px solid #d9d3c5;border-radius:10px;padding:27px;box-shadow:0 8px 22px #6e60491f;font-family:Arial,sans-serif;position:relative}.page-head{display:flex;justify-content:space-between;border-bottom:2px solid #252a32;padding-bottom:7px;font-size:12px;font-weight:900}.textbook-page h3{text-align:center;font-size:24px;margin:16px 0}.book-qs{display:flex;flex-direction:column;gap:9px}.book-q{display:grid;grid-template-columns:34px 1fr;gap:7px;line-height:1.4;padding-bottom:7px;border-bottom:1px dotted #c8c3b7}.qnum{font-weight:900}.page-num{text-align:right;font-weight:900;margin-top:18px}.page-jumps{display:flex;gap:8px;flex-wrap:wrap}.page-jumps a{width:40px;height:40px;display:grid;place-items:center;border-radius:50%;background:#ece7ff;color:#553cc5;text-decoration:none;font-weight:900}
 .legend{font-size:13px;color:#667085}.weekend-note{background:#eaf8ff;padding:14px;border-radius:16px;font-weight:800}
 @media(max-width:850px){.stats,.practice-grid{grid-template-columns:repeat(2,1fr)}.insights,.fix-grid{grid-template-columns:1fr}}@media(max-width:520px){.stats,.practice-grid{grid-template-columns:1fr}.section{padding:18px}}
-@media print{nav,button{display:none}.pa{display:block}body{background:white}.section,.hero,.textbook-page{box-shadow:none}}
 
 .full-question{margin:12px 0;padding:14px 15px;border-radius:15px;background:#f4f8ff;border:2px solid #d9e8ff;line-height:1.55}
 .full-question b{display:block;color:#3c5b9b;margin-bottom:6px}
 
+.quiz-options{display:flex;flex-direction:column;gap:8px}
+.quiz-opt{border:2px solid #ded4ff !important;border-radius:12px !important;padding:9px 12px !important;background:white !important;color:#2b2140 !important;font-weight:800 !important;cursor:pointer;text-align:left;display:flex;align-items:center;gap:8px;width:100%}
+.quiz-opt:hover{border-color:#9b8cf0 !important}
+.quiz-letter{background:#eee7ff;color:#5d3bd1;font-weight:900;border-radius:8px;width:22px;height:22px;display:inline-flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0}
+.quiz-opt.correct{background:#edfff6 !important;border-color:#2eb67d !important;color:#1f8a53 !important}
+.quiz-opt.correct .quiz-letter{background:#c9f5df;color:#1f8a53}
+.quiz-opt.incorrect{background:#fff0f2 !important;border-color:#e0546b !important;color:#a32634 !important}
+.quiz-opt.incorrect .quiz-letter{background:#ffd0d6;color:#a32634}
+.quiz-opt.disabled{cursor:default;opacity:.85}
+.quiz-feedback{margin-top:8px;font-weight:900;font-size:14px}
+.progress-summary{background:linear-gradient(135deg,#eef6ff,#f0efff);border:2px solid #cfe4ff;border-radius:18px;padding:14px 18px;margin:14px 0 18px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.progress-tally{font-weight:900;color:#2b4c7a}
+.reset-progress{border:0 !important;background:none !important;color:#7a6ba8 !important;font-weight:800;text-decoration:underline;cursor:pointer;font-size:13px;padding:0 !important}
+.weak-word-panel{width:100%;margin-top:6px}
+.weak-word-panel-title{font-weight:900;font-size:12px;text-transform:uppercase;color:#b23a4e;margin-bottom:6px}
+.weak-word-list{display:flex;flex-wrap:wrap;gap:8px}
+.weak-word-list span{background:white;border:2px solid #ffd0d6;border-radius:999px;padding:5px 12px;font-weight:800;color:#a32634;font-size:13px}
+.shuffle-btn{border:0 !important;border-radius:999px !important;padding:8px 16px !important;background:#ff6fa9 !important;color:white !important;font-weight:900;cursor:pointer;font-size:13px}
+.print-toolbar{text-align:center;margin:0 0 18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.print-toolbar button{background:#6246d9}
+.print-toolbar button:nth-child(2){background:#24986a}
+@media print{
+  nav,.shuffle-btn,.progress-summary,.print-toolbar{display:none !important}
+  .pa{display:block}
+  body{background:white}
+  .section,.hero,.textbook-page{box-shadow:none}
+  .quiz-opt.correct,.quiz-opt.incorrect{background:white !important;border-color:#ded4ff !important;color:#2b2140 !important}
+  .quiz-opt.correct .quiz-letter,.quiz-opt.incorrect .quiz-letter{background:#eee7ff !important;color:#5d3bd1 !important}
+  .quiz-feedback{display:none !important}
+  .quiz-options[data-correct]::after{content:"✓ Answer: " attr(data-correct);display:block;margin-top:8px;font-weight:900;color:#1f8a53}
+  body.print-blank .quiz-options[data-correct]::after{content:none}
+}
+
 </style></head><body>
-<header><div class="hero"><div style="font-size:40px">➕➖✖️➗🧠✨</div><h1>Sarah's Math Homework Adventure</h1>
+<header><div class="hero"><div style="font-size:40px">➕➖✖️➗🧠✨</div><div style="font-weight:900;font-size:14px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-bottom:6px">📅 Monday, August 24, 2026</div><h1>Sarah's Math Homework Adventure</h1>
 <p>Lessons 1–3 recreated from the uploaded homework pages, with Sarah's Lesson 2 and Lesson 3 answers checked, corrections explained, and targeted practice for today.</p></div></header>
 <main>
 <nav><a href="#dashboard">Dashboard</a><a href="#corrections">Fix-It Zone</a><a href="#today-practice">Today's Practice</a><a href="#answers">All Graded Answers</a><a href="#textbook">Recreated Textbook</a><a href="#weekend">Weekend</a></nav>
+<div class="print-toolbar"><button onclick="printBlank()">🖨️ Print blank worksheet</button><button onclick="printAnswerKey()">🖨️ Print answer key</button></div>
 
 <section class="section" id="dashboard">
 <div class="kicker">Performance dashboard</div><h2>🌟 How Sarah is doing</h2>
@@ -120,112 +153,113 @@ main{max-width:1180px;margin:auto;padding:0 18px 70px}nav{position:sticky;top:6p
 </section>
 
 <section class="section" id="today-practice"><div class="kicker">Practice today</div><h2>🎮 3 similar questions for each focus problem</h2>
-<p>There are <b>21 questions</b>. Sarah should solve them first, then tap <b>Check answer</b>.</p>
-<div class="practice-grid"><div class="practice-card">
-      <div class="tag">Lesson 2 #5</div>
+<p>It's a quiz! There are <b>21 questions</b> — solve each one in your head or on paper, then tap the answer you think is correct. <button class="shuffle-btn" onclick="shuffleGrid('today-grid','Practice Question')">🔀 Shuffle order</button></p>
+<div class="progress-summary" id="today-grid-summary"><span class="progress-tally">0/21 answered · 0 correct · 0 need review</span><button class="reset-progress" onclick="resetProgress('today-grid')">↺ Reset progress</button><div class="weak-word-panel" style="display:none"><div class="weak-word-panel-title">📋 Answers to review</div><div class="weak-word-list"></div></div></div>
+<div class="practice-grid" id="today-grid"><div class="practice-card">
+      <div class="tag" data-source="Lesson 2 #5">Practice Question</div>
       <div class="pq">Rearrange (25×13)×4 to make it easy. Name the properties used.</div>
-      <button onclick="toggleAnswer('t-Lesson2-5-1')">Check answer</button>
-      <div class="pa" id="t-Lesson2-5-1">(25×4)×13=100×13=1300; Commutative and Associative Properties.</div>
+      <div class="quiz-options" id="t-Lesson2-5-1-options" data-correct="(25×4)×13=100×13=1300; Commutative and Associative Properties."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-1')" data-value="1200; Commutative and Associative Properties."><span class="quiz-letter">A</span>1200; Commutative and Associative Properties.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-1')" data-value="1300; Commutative Property only."><span class="quiz-letter">B</span>1300; Commutative Property only.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-1')" data-value="(25×4)×13=100×13=1300; Commutative and Associative Properties."><span class="quiz-letter">C</span>(25×4)×13=100×13=1300; Commutative and Associative Properties.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-1')" data-value="1300; Associative Property only."><span class="quiz-letter">D</span>1300; Associative Property only.</button></div>
+      <div class="quiz-feedback" id="t-Lesson2-5-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #5</div>
+      <div class="tag" data-source="Lesson 2 #5">Practice Question</div>
       <div class="pq">Rearrange 5×(18×2) to make it easy. Name the properties.</div>
-      <button onclick="toggleAnswer('t-Lesson2-5-2')">Check answer</button>
-      <div class="pa" id="t-Lesson2-5-2">(5×2)×18=10×18=180; Commutative and Associative Properties.</div>
+      <div class="quiz-options" id="t-Lesson2-5-2-options" data-correct="(5×2)×18=10×18=180; Commutative and Associative Properties."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-2')" data-value="180; Commutative Property only."><span class="quiz-letter">A</span>180; Commutative Property only.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-2')" data-value="180; Associative Property only."><span class="quiz-letter">B</span>180; Associative Property only.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-2')" data-value="160; Commutative and Associative Properties."><span class="quiz-letter">C</span>160; Commutative and Associative Properties.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-2')" data-value="(5×2)×18=10×18=180; Commutative and Associative Properties."><span class="quiz-letter">D</span>(5×2)×18=10×18=180; Commutative and Associative Properties.</button></div>
+      <div class="quiz-feedback" id="t-Lesson2-5-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #5</div>
+      <div class="tag" data-source="Lesson 2 #5">Practice Question</div>
       <div class="pq">Rearrange (50×7)×2 to make it easy. Name the properties.</div>
-      <button onclick="toggleAnswer('t-Lesson2-5-3')">Check answer</button>
-      <div class="pa" id="t-Lesson2-5-3">(50×2)×7=100×7=700; Commutative and Associative Properties.</div>
+      <div class="quiz-options" id="t-Lesson2-5-3-options" data-correct="(50×2)×7=100×7=700; Commutative and Associative Properties."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-3')" data-value="700; Commutative Property only."><span class="quiz-letter">A</span>700; Commutative Property only.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-3')" data-value="(50×2)×7=100×7=700; Commutative and Associative Properties."><span class="quiz-letter">B</span>(50×2)×7=100×7=700; Commutative and Associative Properties.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-3')" data-value="750; Commutative and Associative Properties."><span class="quiz-letter">C</span>750; Commutative and Associative Properties.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-5-3')" data-value="700; Associative Property only."><span class="quiz-letter">D</span>700; Associative Property only.</button></div>
+      <div class="quiz-feedback" id="t-Lesson2-5-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #7</div>
+      <div class="tag" data-source="Lesson 2 #7">Practice Question</div>
       <div class="pq">Write the set of whole numbers using braces and an ellipsis.</div>
-      <button onclick="toggleAnswer('t-Lesson2-7-1')">Check answer</button>
-      <div class="pa" id="t-Lesson2-7-1">{0,1,2,3,4,…}</div>
+      <div class="quiz-options" id="t-Lesson2-7-1-options" data-correct="{0,1,2,3,4,…}"><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-1')" data-value="…,−2,−1,0,1,2,…"><span class="quiz-letter">A</span>…,−2,−1,0,1,2,…</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-1')" data-value="{0,1,2,3,4}"><span class="quiz-letter">B</span>{0,1,2,3,4}</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-1')" data-value="{0,1,2,3,4,…}"><span class="quiz-letter">C</span>{0,1,2,3,4,…}</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-1')" data-value="{1,2,3,4,…}"><span class="quiz-letter">D</span>{1,2,3,4,…}</button></div>
+      <div class="quiz-feedback" id="t-Lesson2-7-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #7</div>
+      <div class="tag" data-source="Lesson 2 #7">Practice Question</div>
       <div class="pq">Which set is correct for whole numbers: {1,2,3,…} or {0,1,2,3,…}?</div>
-      <button onclick="toggleAnswer('t-Lesson2-7-2')">Check answer</button>
-      <div class="pa" id="t-Lesson2-7-2">{0,1,2,3,…}</div>
+      <div class="quiz-options" id="t-Lesson2-7-2-options" data-correct="{0,1,2,3,…}"><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-2')" data-value="{0,1,2,3,…}"><span class="quiz-letter">A</span>{0,1,2,3,…}</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-2')" data-value="{1,2,3,…}"><span class="quiz-letter">B</span>{1,2,3,…}</button></div>
+      <div class="quiz-feedback" id="t-Lesson2-7-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #7</div>
+      <div class="tag" data-source="Lesson 2 #7">Practice Question</div>
       <div class="pq">Why is the … needed in {0,1,2,3,…}?</div>
-      <button onclick="toggleAnswer('t-Lesson2-7-3')">Check answer</button>
-      <div class="pa" id="t-Lesson2-7-3">It shows the pattern continues forever.</div>
+      <div class="quiz-options" id="t-Lesson2-7-3-options" data-correct="It shows the pattern continues forever."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-3')" data-value="It means the numbers repeat."><span class="quiz-letter">A</span>It means the numbers repeat.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-3')" data-value="It shows numbers are missing."><span class="quiz-letter">B</span>It shows numbers are missing.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-3')" data-value="It shows the pattern continues forever."><span class="quiz-letter">C</span>It shows the pattern continues forever.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-7-3')" data-value="It marks the smallest number."><span class="quiz-letter">D</span>It marks the smallest number.</button></div>
+      <div class="quiz-feedback" id="t-Lesson2-7-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #9</div>
+      <div class="tag" data-source="Lesson 2 #9">Practice Question</div>
       <div class="pq">True or false: Every whole number is a counting number.</div>
-      <button onclick="toggleAnswer('t-Lesson2-9-1')">Check answer</button>
-      <div class="pa" id="t-Lesson2-9-1">False. 0 is whole but not counting.</div>
+      <div class="quiz-options" id="t-Lesson2-9-1-options" data-correct="False. 0 is whole but not counting."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-9-1')" data-value="True."><span class="quiz-letter">A</span>True.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-9-1')" data-value="False. 0 is whole but not counting."><span class="quiz-letter">B</span>False. 0 is whole but not counting.</button></div>
+      <div class="quiz-feedback" id="t-Lesson2-9-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #9</div>
+      <div class="tag" data-source="Lesson 2 #9">Practice Question</div>
       <div class="pq">Give one whole number that is not a counting number.</div>
-      <button onclick="toggleAnswer('t-Lesson2-9-2')">Check answer</button>
-      <div class="pa" id="t-Lesson2-9-2">0.</div>
+      <div class="quiz-options" id="t-Lesson2-9-2-options" data-correct="0."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-9-2')" data-value="1."><span class="quiz-letter">A</span>1.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-9-2')" data-value="−1."><span class="quiz-letter">B</span>−1.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-9-2')" data-value="0."><span class="quiz-letter">C</span>0.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-9-2')" data-value="There isn't one."><span class="quiz-letter">D</span>There isn't one.</button></div>
+      <div class="quiz-feedback" id="t-Lesson2-9-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #9</div>
+      <div class="tag" data-source="Lesson 2 #9">Practice Question</div>
       <div class="pq">True or false: 0 is a whole number.</div>
-      <button onclick="toggleAnswer('t-Lesson2-9-3')">Check answer</button>
-      <div class="pa" id="t-Lesson2-9-3">True.</div>
+      <div class="quiz-options" id="t-Lesson2-9-3-options" data-correct="True."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-9-3')" data-value="False."><span class="quiz-letter">A</span>False.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson2-9-3')" data-value="True."><span class="quiz-letter">B</span>True.</button></div>
+      <div class="quiz-feedback" id="t-Lesson2-9-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #5</div>
+      <div class="tag" data-source="Lesson 3 #5">Practice Question</div>
       <div class="pq">Last week Mia read 146 pages and this week 158. How many more this week?</div>
-      <button onclick="toggleAnswer('t-Lesson3-5-1')">Check answer</button>
-      <div class="pa" id="t-Lesson3-5-1">12 pages.</div>
+      <div class="quiz-options" id="t-Lesson3-5-1-options" data-correct="12 pages."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-1')" data-value="304 pages."><span class="quiz-letter">A</span>304 pages.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-1')" data-value="10 pages."><span class="quiz-letter">B</span>10 pages.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-1')" data-value="14 pages."><span class="quiz-letter">C</span>14 pages.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-1')" data-value="12 pages."><span class="quiz-letter">D</span>12 pages.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-5-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #5</div>
+      <div class="tag" data-source="Lesson 3 #5">Practice Question</div>
       <div class="pq">Sam ran 123 meters Monday and 137 Tuesday. How many more Tuesday?</div>
-      <button onclick="toggleAnswer('t-Lesson3-5-2')">Check answer</button>
-      <div class="pa" id="t-Lesson3-5-2">14 meters.</div>
+      <div class="quiz-options" id="t-Lesson3-5-2-options" data-correct="14 meters."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-2')" data-value="12 meters."><span class="quiz-letter">A</span>12 meters.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-2')" data-value="16 meters."><span class="quiz-letter">B</span>16 meters.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-2')" data-value="260 meters."><span class="quiz-letter">C</span>260 meters.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-2')" data-value="14 meters."><span class="quiz-letter">D</span>14 meters.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-5-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #5</div>
+      <div class="tag" data-source="Lesson 3 #5">Practice Question</div>
       <div class="pq">A book had 215 pages read yesterday and 228 today. What is the increase?</div>
-      <button onclick="toggleAnswer('t-Lesson3-5-3')">Check answer</button>
-      <div class="pa" id="t-Lesson3-5-3">13 pages.</div>
+      <div class="quiz-options" id="t-Lesson3-5-3-options" data-correct="13 pages."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-3')" data-value="13 pages."><span class="quiz-letter">A</span>13 pages.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-3')" data-value="15 pages."><span class="quiz-letter">B</span>15 pages.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-3')" data-value="443 pages."><span class="quiz-letter">C</span>443 pages.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-5-3')" data-value="11 pages."><span class="quiz-letter">D</span>11 pages.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-5-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #15</div>
+      <div class="tag" data-source="Lesson 3 #15">Practice Question</div>
       <div class="pq">Rearrange 4×(29×25). Name the properties and find the product.</div>
-      <button onclick="toggleAnswer('t-Lesson3-15-1')">Check answer</button>
-      <div class="pa" id="t-Lesson3-15-1">(4×25)×29=100×29=2900; Commutative and Associative.</div>
+      <div class="quiz-options" id="t-Lesson3-15-1-options" data-correct="(4×25)×29=100×29=2900; Commutative and Associative."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-1')" data-value="2600; Commutative and Associative."><span class="quiz-letter">A</span>2600; Commutative and Associative.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-1')" data-value="(4×25)×29=100×29=2900; Commutative and Associative."><span class="quiz-letter">B</span>(4×25)×29=100×29=2900; Commutative and Associative.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-1')" data-value="2900; Associative Property only."><span class="quiz-letter">C</span>2900; Associative Property only.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-1')" data-value="2900; Commutative Property only."><span class="quiz-letter">D</span>2900; Commutative Property only.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-15-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #15</div>
+      <div class="tag" data-source="Lesson 3 #15">Practice Question</div>
       <div class="pq">Rearrange 5×(16×2). Name both properties.</div>
-      <button onclick="toggleAnswer('t-Lesson3-15-2')">Check answer</button>
-      <div class="pa" id="t-Lesson3-15-2">(5×2)×16=10×16=160; Commutative and Associative.</div>
+      <div class="quiz-options" id="t-Lesson3-15-2-options" data-correct="(5×2)×16=10×16=160; Commutative and Associative."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-2')" data-value="160; Commutative Property only."><span class="quiz-letter">A</span>160; Commutative Property only.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-2')" data-value="(5×2)×16=10×16=160; Commutative and Associative."><span class="quiz-letter">B</span>(5×2)×16=10×16=160; Commutative and Associative.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-2')" data-value="150; Commutative and Associative."><span class="quiz-letter">C</span>150; Commutative and Associative.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-2')" data-value="160; Associative Property only."><span class="quiz-letter">D</span>160; Associative Property only.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-15-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #15</div>
+      <div class="tag" data-source="Lesson 3 #15">Practice Question</div>
       <div class="pq">Rearrange 25×(12×4). Find the product.</div>
-      <button onclick="toggleAnswer('t-Lesson3-15-3')">Check answer</button>
-      <div class="pa" id="t-Lesson3-15-3">(25×4)×12=100×12=1200.</div>
+      <div class="quiz-options" id="t-Lesson3-15-3-options" data-correct="(25×4)×12=100×12=1200."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-3')" data-value="1100."><span class="quiz-letter">A</span>1100.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-3')" data-value="900."><span class="quiz-letter">B</span>900.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-3')" data-value="1300."><span class="quiz-letter">C</span>1300.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-15-3')" data-value="(25×4)×12=100×12=1200."><span class="quiz-letter">D</span>(25×4)×12=100×12=1200.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-15-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #25</div>
+      <div class="tag" data-source="Lesson 3 #25">Practice Question</div>
       <div class="pq">If 7t=7, what is t and what property is illustrated?</div>
-      <button onclick="toggleAnswer('t-Lesson3-25-1')">Check answer</button>
-      <div class="pa" id="t-Lesson3-25-1">t=1; Identity Property of Multiplication.</div>
+      <div class="quiz-options" id="t-Lesson3-25-1-options" data-correct="t=1; Identity Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-1')" data-value="t=0; Zero Property of Multiplication."><span class="quiz-letter">A</span>t=0; Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-1')" data-value="t=1; Zero Property of Multiplication."><span class="quiz-letter">B</span>t=1; Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-1')" data-value="t=1; Identity Property of Multiplication."><span class="quiz-letter">C</span>t=1; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-1')" data-value="t=7; Identity Property of Multiplication."><span class="quiz-letter">D</span>t=7; Identity Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-25-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #25</div>
+      <div class="tag" data-source="Lesson 3 #25">Practice Question</div>
       <div class="pq">If 12m=12, what is m and what property?</div>
-      <button onclick="toggleAnswer('t-Lesson3-25-2')">Check answer</button>
-      <div class="pa" id="t-Lesson3-25-2">m=1; Identity Property of Multiplication.</div>
+      <div class="quiz-options" id="t-Lesson3-25-2-options" data-correct="m=1; Identity Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-2')" data-value="m=0; Zero Property of Multiplication."><span class="quiz-letter">A</span>m=0; Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-2')" data-value="m=1; Zero Property of Multiplication."><span class="quiz-letter">B</span>m=1; Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-2')" data-value="m=12; Identity Property of Multiplication."><span class="quiz-letter">C</span>m=12; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-2')" data-value="m=1; Identity Property of Multiplication."><span class="quiz-letter">D</span>m=1; Identity Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-25-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #25</div>
+      <div class="tag" data-source="Lesson 3 #25">Practice Question</div>
       <div class="pq">What number can multiply 45 without changing it? Name the property.</div>
-      <button onclick="toggleAnswer('t-Lesson3-25-3')">Check answer</button>
-      <div class="pa" id="t-Lesson3-25-3">1; Identity Property of Multiplication.</div>
+      <div class="quiz-options" id="t-Lesson3-25-3-options" data-correct="1; Identity Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-3')" data-value="1; Identity Property of Multiplication."><span class="quiz-letter">A</span>1; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-3')" data-value="0; Zero Property of Multiplication."><span class="quiz-letter">B</span>0; Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-3')" data-value="45; Identity Property of Multiplication."><span class="quiz-letter">C</span>45; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-25-3')" data-value="1; Zero Property of Multiplication."><span class="quiz-letter">D</span>1; Zero Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-25-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #27</div>
+      <div class="tag" data-source="Lesson 3 #27">Practice Question</div>
       <div class="pq">If 8x=0, what is x and what property is illustrated?</div>
-      <button onclick="toggleAnswer('t-Lesson3-27-1')">Check answer</button>
-      <div class="pa" id="t-Lesson3-27-1">x=0; Zero Property of Multiplication.</div>
+      <div class="quiz-options" id="t-Lesson3-27-1-options" data-correct="x=0; Zero Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-1')" data-value="x=0; Zero Property of Multiplication."><span class="quiz-letter">A</span>x=0; Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-1')" data-value="x=0; Identity Property of Multiplication."><span class="quiz-letter">B</span>x=0; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-1')" data-value="x=1; Identity Property of Multiplication."><span class="quiz-letter">C</span>x=1; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-1')" data-value="x=8; Zero Property of Multiplication."><span class="quiz-letter">D</span>x=8; Zero Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-27-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #27</div>
+      <div class="tag" data-source="Lesson 3 #27">Practice Question</div>
       <div class="pq">If 15m=0, what is m? Name the property.</div>
-      <button onclick="toggleAnswer('t-Lesson3-27-2')">Check answer</button>
-      <div class="pa" id="t-Lesson3-27-2">m=0; Zero Property of Multiplication.</div>
+      <div class="quiz-options" id="t-Lesson3-27-2-options" data-correct="m=0; Zero Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-2')" data-value="m=0; Identity Property of Multiplication."><span class="quiz-letter">A</span>m=0; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-2')" data-value="m=0; Zero Property of Multiplication."><span class="quiz-letter">B</span>m=0; Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-2')" data-value="m=1; Identity Property of Multiplication."><span class="quiz-letter">C</span>m=1; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-2')" data-value="m=15; Zero Property of Multiplication."><span class="quiz-letter">D</span>m=15; Zero Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-27-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #27</div>
+      <div class="tag" data-source="Lesson 3 #27">Practice Question</div>
       <div class="pq">Complete: 37×___=0.</div>
-      <button onclick="toggleAnswer('t-Lesson3-27-3')">Check answer</button>
-      <div class="pa" id="t-Lesson3-27-3">0.</div>
+      <div class="quiz-options" id="t-Lesson3-27-3-options" data-correct="0."><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-3')" data-value="−1."><span class="quiz-letter">A</span>−1.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-3')" data-value="0."><span class="quiz-letter">B</span>0.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-3')" data-value="37."><span class="quiz-letter">C</span>37.</button><button class="quiz-opt" onclick="selectOption(this,'t-Lesson3-27-3')" data-value="1."><span class="quiz-letter">D</span>1.</button></div>
+      <div class="quiz-feedback" id="t-Lesson3-27-3-feedback"></div>
     </div></div>
 </section>
 
@@ -402,185 +436,293 @@ main{max-width:1180px;margin:auto;padding:0 18px 70px}nav{position:sticky;top:6p
 </section>
 
 <section class="section" id="weekend"><div class="kicker">Weekend reinforcement</div><h2>🌈 5 more questions for each focus problem</h2>
-<div class="weekend-note">These are separate from today's required practice. Use them later for quick reinforcement of the same concepts.</div>
-<div class="practice-grid" style="margin-top:14px"><div class="practice-card">
-      <div class="tag">Lesson 2 #5</div>
+<div class="weekend-note">These are separate from today's required practice. Use them later for quick reinforcement of the same concepts. <button class="shuffle-btn" onclick="shuffleGrid('weekend-grid','Weekend Question')">🔀 Shuffle order</button></div>
+<div class="progress-summary" id="weekend-grid-summary"><span class="progress-tally">0/35 answered · 0 correct · 0 need review</span><button class="reset-progress" onclick="resetProgress('weekend-grid')">↺ Reset progress</button><div class="weak-word-panel" style="display:none"><div class="weak-word-panel-title">📋 Answers to review</div><div class="weak-word-list"></div></div></div>
+<div class="practice-grid" id="weekend-grid" style="margin-top:14px"><div class="practice-card">
+      <div class="tag" data-source="Lesson 2 #5">Practice Question</div>
       <div class="pq">Rearrange 4×(19×25) and find the product.</div>
-      <button onclick="toggleAnswer('w-Lesson2-5-1')">Check answer</button>
-      <div class="pa" id="w-Lesson2-5-1">(4×25)×19=100×19=1900.</div>
+      <div class="quiz-options" id="w-Lesson2-5-1-options" data-correct="(4×25)×19=100×19=1900."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-1')" data-value="1400."><span class="quiz-letter">A</span>1400.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-1')" data-value="1800."><span class="quiz-letter">B</span>1800.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-1')" data-value="2000."><span class="quiz-letter">C</span>2000.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-1')" data-value="(4×25)×19=100×19=1900."><span class="quiz-letter">D</span>(4×25)×19=100×19=1900.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-5-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #5</div>
+      <div class="tag" data-source="Lesson 2 #5">Practice Question</div>
       <div class="pq">Rearrange (20×17)×5 and name the properties.</div>
-      <button onclick="toggleAnswer('w-Lesson2-5-2')">Check answer</button>
-      <div class="pa" id="w-Lesson2-5-2">(20×5)×17=100×17=1700; Commutative and Associative.</div>
+      <div class="quiz-options" id="w-Lesson2-5-2-options" data-correct="(20×5)×17=100×17=1700; Commutative and Associative."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-2')" data-value="(20×5)×17=100×17=1700; Commutative and Associative."><span class="quiz-letter">A</span>(20×5)×17=100×17=1700; Commutative and Associative.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-2')" data-value="1700; Associative Property only."><span class="quiz-letter">B</span>1700; Associative Property only.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-2')" data-value="1700; Commutative Property only."><span class="quiz-letter">C</span>1700; Commutative Property only.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-2')" data-value="1600; Commutative and Associative."><span class="quiz-letter">D</span>1600; Commutative and Associative.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-5-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #5</div>
+      <div class="tag" data-source="Lesson 2 #5">Practice Question</div>
       <div class="pq">Rearrange 8×(25×5) to make it easier.</div>
-      <button onclick="toggleAnswer('w-Lesson2-5-3')">Check answer</button>
-      <div class="pa" id="w-Lesson2-5-3">(8×5)×25=40×25=1000.</div>
+      <div class="quiz-options" id="w-Lesson2-5-3-options" data-correct="(8×5)×25=40×25=1000."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-3')" data-value="900."><span class="quiz-letter">A</span>900.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-3')" data-value="(8×5)×25=40×25=1000."><span class="quiz-letter">B</span>(8×5)×25=40×25=1000.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-3')" data-value="800."><span class="quiz-letter">C</span>800.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-3')" data-value="1100."><span class="quiz-letter">D</span>1100.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-5-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #5</div>
+      <div class="tag" data-source="Lesson 2 #5">Practice Question</div>
       <div class="pq">Rearrange (125×6)×8 to make a friendly product.</div>
-      <button onclick="toggleAnswer('w-Lesson2-5-4')">Check answer</button>
-      <div class="pa" id="w-Lesson2-5-4">(125×8)×6=1000×6=6000.</div>
+      <div class="quiz-options" id="w-Lesson2-5-4-options" data-correct="(125×8)×6=1000×6=6000."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-4')" data-value="5500."><span class="quiz-letter">A</span>5500.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-4')" data-value="5000."><span class="quiz-letter">B</span>5000.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-4')" data-value="7000."><span class="quiz-letter">C</span>7000.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-4')" data-value="(125×8)×6=1000×6=6000."><span class="quiz-letter">D</span>(125×8)×6=1000×6=6000.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-5-4-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #5</div>
+      <div class="tag" data-source="Lesson 2 #5">Practice Question</div>
       <div class="pq">Why do you need the Associative Property when changing parentheses?</div>
-      <button onclick="toggleAnswer('w-Lesson2-5-5')">Check answer</button>
-      <div class="pa" id="w-Lesson2-5-5">Because it lets you regroup factors without changing their order/result.</div>
+      <div class="quiz-options" id="w-Lesson2-5-5-options" data-correct="Because it lets you regroup factors without changing their order/result."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-5')" data-value="Because it makes numbers bigger."><span class="quiz-letter">A</span>Because it makes numbers bigger.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-5')" data-value="Because it lets you regroup factors without changing their order/result."><span class="quiz-letter">B</span>Because it lets you regroup factors without changing their order/result.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-5')" data-value="Because it removes the need for parentheses."><span class="quiz-letter">C</span>Because it removes the need for parentheses.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-5-5')" data-value="Because it lets you change the order of factors."><span class="quiz-letter">D</span>Because it lets you change the order of factors.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-5-5-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #7</div>
+      <div class="tag" data-source="Lesson 2 #7">Practice Question</div>
       <div class="pq">Write the counting numbers with braces and an ellipsis.</div>
-      <button onclick="toggleAnswer('w-Lesson2-7-1')">Check answer</button>
-      <div class="pa" id="w-Lesson2-7-1">{1,2,3,4,…}</div>
+      <div class="quiz-options" id="w-Lesson2-7-1-options" data-correct="{1,2,3,4,…}"><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-1')" data-value="{1,2,3,4}"><span class="quiz-letter">A</span>{1,2,3,4}</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-1')" data-value="{1,2,3,4,…}"><span class="quiz-letter">B</span>{1,2,3,4,…}</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-1')" data-value="{0,1,2,3,4,…}"><span class="quiz-letter">C</span>{0,1,2,3,4,…}</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-1')" data-value="{2,4,6,8,…}"><span class="quiz-letter">D</span>{2,4,6,8,…}</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-7-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #7</div>
+      <div class="tag" data-source="Lesson 2 #7">Practice Question</div>
       <div class="pq">Write the first five whole numbers and show that the set continues.</div>
-      <button onclick="toggleAnswer('w-Lesson2-7-2')">Check answer</button>
-      <div class="pa" id="w-Lesson2-7-2">{0,1,2,3,4,…}</div>
+      <div class="quiz-options" id="w-Lesson2-7-2-options" data-correct="{0,1,2,3,4,…}"><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-2')" data-value="{0,2,4,6,8,…}"><span class="quiz-letter">A</span>{0,2,4,6,8,…}</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-2')" data-value="{1,2,3,4,5,…}"><span class="quiz-letter">B</span>{1,2,3,4,5,…}</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-2')" data-value="{0,1,2,3,4}"><span class="quiz-letter">C</span>{0,1,2,3,4}</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-2')" data-value="{0,1,2,3,4,…}"><span class="quiz-letter">D</span>{0,1,2,3,4,…}</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-7-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #7</div>
+      <div class="tag" data-source="Lesson 2 #7">Practice Question</div>
       <div class="pq">Is 0 included in the whole numbers?</div>
-      <button onclick="toggleAnswer('w-Lesson2-7-3')">Check answer</button>
-      <div class="pa" id="w-Lesson2-7-3">Yes.</div>
+      <div class="quiz-options" id="w-Lesson2-7-3-options" data-correct="Yes."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-3')" data-value="Yes."><span class="quiz-letter">A</span>Yes.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-3')" data-value="No."><span class="quiz-letter">B</span>No.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-7-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #7</div>
+      <div class="tag" data-source="Lesson 2 #7">Practice Question</div>
       <div class="pq">Is −1 a whole number?</div>
-      <button onclick="toggleAnswer('w-Lesson2-7-4')">Check answer</button>
-      <div class="pa" id="w-Lesson2-7-4">No.</div>
+      <div class="quiz-options" id="w-Lesson2-7-4-options" data-correct="No."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-4')" data-value="No."><span class="quiz-letter">A</span>No.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-4')" data-value="Yes."><span class="quiz-letter">B</span>Yes.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-7-4-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #7</div>
+      <div class="tag" data-source="Lesson 2 #7">Practice Question</div>
       <div class="pq">What is the biggest whole number?</div>
-      <button onclick="toggleAnswer('w-Lesson2-7-5')">Check answer</button>
-      <div class="pa" id="w-Lesson2-7-5">There is no biggest whole number; the set continues forever.</div>
+      <div class="quiz-options" id="w-Lesson2-7-5-options" data-correct="There is no biggest whole number; the set continues forever."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-5')" data-value="There is no biggest whole number; the set continues forever."><span class="quiz-letter">A</span>There is no biggest whole number; the set continues forever.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-5')" data-value="It is 100."><span class="quiz-letter">B</span>It is 100.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-5')" data-value="It is infinity, an actual number."><span class="quiz-letter">C</span>It is infinity, an actual number.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-7-5')" data-value="It is 0."><span class="quiz-letter">D</span>It is 0.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-7-5-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #9</div>
+      <div class="tag" data-source="Lesson 2 #9">Practice Question</div>
       <div class="pq">True or false: Every counting number is a whole number.</div>
-      <button onclick="toggleAnswer('w-Lesson2-9-1')">Check answer</button>
-      <div class="pa" id="w-Lesson2-9-1">True.</div>
+      <div class="quiz-options" id="w-Lesson2-9-1-options" data-correct="True."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-1')" data-value="False."><span class="quiz-letter">A</span>False.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-1')" data-value="True."><span class="quiz-letter">B</span>True.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-9-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #9</div>
+      <div class="tag" data-source="Lesson 2 #9">Practice Question</div>
       <div class="pq">Why is &#x27;all whole numbers are counting numbers&#x27; false?</div>
-      <button onclick="toggleAnswer('w-Lesson2-9-2')">Check answer</button>
-      <div class="pa" id="w-Lesson2-9-2">Because 0 belongs to whole numbers but not counting numbers.</div>
+      <div class="quiz-options" id="w-Lesson2-9-2-options" data-correct="Because 0 belongs to whole numbers but not counting numbers."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-2')" data-value="Because 1 belongs to whole numbers but not counting numbers."><span class="quiz-letter">A</span>Because 1 belongs to whole numbers but not counting numbers.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-2')" data-value="Because whole numbers stop at 100."><span class="quiz-letter">B</span>Because whole numbers stop at 100.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-2')" data-value="Because counting numbers include negative numbers."><span class="quiz-letter">C</span>Because counting numbers include negative numbers.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-2')" data-value="Because 0 belongs to whole numbers but not counting numbers."><span class="quiz-letter">D</span>Because 0 belongs to whole numbers but not counting numbers.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-9-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #9</div>
+      <div class="tag" data-source="Lesson 2 #9">Practice Question</div>
       <div class="pq">Which set includes 0: counting numbers or whole numbers?</div>
-      <button onclick="toggleAnswer('w-Lesson2-9-3')">Check answer</button>
-      <div class="pa" id="w-Lesson2-9-3">Whole numbers.</div>
+      <div class="quiz-options" id="w-Lesson2-9-3-options" data-correct="Whole numbers."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-3')" data-value="Counting numbers."><span class="quiz-letter">A</span>Counting numbers.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-3')" data-value="Whole numbers."><span class="quiz-letter">B</span>Whole numbers.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-9-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #9</div>
+      <div class="tag" data-source="Lesson 2 #9">Practice Question</div>
       <div class="pq">Is 7 both a counting number and a whole number?</div>
-      <button onclick="toggleAnswer('w-Lesson2-9-4')">Check answer</button>
-      <div class="pa" id="w-Lesson2-9-4">Yes.</div>
+      <div class="quiz-options" id="w-Lesson2-9-4-options" data-correct="Yes."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-4')" data-value="No."><span class="quiz-letter">A</span>No.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-4')" data-value="Yes."><span class="quiz-letter">B</span>Yes.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-9-4-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 2 #9</div>
+      <div class="tag" data-source="Lesson 2 #9">Practice Question</div>
       <div class="pq">Is there exactly one whole number that is not a counting number?</div>
-      <button onclick="toggleAnswer('w-Lesson2-9-5')">Check answer</button>
-      <div class="pa" id="w-Lesson2-9-5">Yes, 0.</div>
+      <div class="quiz-options" id="w-Lesson2-9-5-options" data-correct="Yes, 0."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-5')" data-value="Yes, 0."><span class="quiz-letter">A</span>Yes, 0.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-5')" data-value="No, there are none."><span class="quiz-letter">B</span>No, there are none.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-5')" data-value="No, there are two."><span class="quiz-letter">C</span>No, there are two.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson2-9-5')" data-value="Yes, but it's 1."><span class="quiz-letter">D</span>Yes, but it's 1.</button></div>
+      <div class="quiz-feedback" id="w-Lesson2-9-5-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #5</div>
+      <div class="tag" data-source="Lesson 3 #5">Practice Question</div>
       <div class="pq">Nina scored 84 points, then 93. How many more points?</div>
-      <button onclick="toggleAnswer('w-Lesson3-5-1')">Check answer</button>
-      <div class="pa" id="w-Lesson3-5-1">9 points.</div>
+      <div class="quiz-options" id="w-Lesson3-5-1-options" data-correct="9 points."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-1')" data-value="9 points."><span class="quiz-letter">A</span>9 points.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-1')" data-value="7 points."><span class="quiz-letter">B</span>7 points.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-1')" data-value="177 points."><span class="quiz-letter">C</span>177 points.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-1')" data-value="11 points."><span class="quiz-letter">D</span>11 points.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-5-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #5</div>
+      <div class="tag" data-source="Lesson 3 #5">Practice Question</div>
       <div class="pq">A plant was 37 cm and grew to 45 cm. How much did it grow?</div>
-      <button onclick="toggleAnswer('w-Lesson3-5-2')">Check answer</button>
-      <div class="pa" id="w-Lesson3-5-2">8 cm.</div>
+      <div class="quiz-options" id="w-Lesson3-5-2-options" data-correct="8 cm."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-2')" data-value="82 cm."><span class="quiz-letter">A</span>82 cm.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-2')" data-value="6 cm."><span class="quiz-letter">B</span>6 cm.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-2')" data-value="8 cm."><span class="quiz-letter">C</span>8 cm.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-2')" data-value="10 cm."><span class="quiz-letter">D</span>10 cm.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-5-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #5</div>
+      <div class="tag" data-source="Lesson 3 #5">Practice Question</div>
       <div class="pq">There were 126 visitors Saturday and 141 Sunday. How many more Sunday?</div>
-      <button onclick="toggleAnswer('w-Lesson3-5-3')">Check answer</button>
-      <div class="pa" id="w-Lesson3-5-3">15 visitors.</div>
+      <div class="quiz-options" id="w-Lesson3-5-3-options" data-correct="15 visitors."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-3')" data-value="13 visitors."><span class="quiz-letter">A</span>13 visitors.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-3')" data-value="267 visitors."><span class="quiz-letter">B</span>267 visitors.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-3')" data-value="15 visitors."><span class="quiz-letter">C</span>15 visitors.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-3')" data-value="17 visitors."><span class="quiz-letter">D</span>17 visitors.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-5-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #5</div>
+      <div class="tag" data-source="Lesson 3 #5">Practice Question</div>
       <div class="pq">Leo saved $52, then had $67. How much more did he save?</div>
-      <button onclick="toggleAnswer('w-Lesson3-5-4')">Check answer</button>
-      <div class="pa" id="w-Lesson3-5-4">$15.</div>
+      <div class="quiz-options" id="w-Lesson3-5-4-options" data-correct="$15."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-4')" data-value="$13."><span class="quiz-letter">A</span>$13.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-4')" data-value="$17."><span class="quiz-letter">B</span>$17.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-4')" data-value="$15."><span class="quiz-letter">C</span>$15.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-4')" data-value="$119."><span class="quiz-letter">D</span>$119.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-5-4-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #5</div>
+      <div class="tag" data-source="Lesson 3 #5">Practice Question</div>
       <div class="pq">What operation usually finds &#x27;how many more&#x27;?</div>
-      <button onclick="toggleAnswer('w-Lesson3-5-5')">Check answer</button>
-      <div class="pa" id="w-Lesson3-5-5">Subtraction.</div>
+      <div class="quiz-options" id="w-Lesson3-5-5-options" data-correct="Subtraction."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-5')" data-value="Addition."><span class="quiz-letter">A</span>Addition.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-5')" data-value="Division."><span class="quiz-letter">B</span>Division.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-5')" data-value="Subtraction."><span class="quiz-letter">C</span>Subtraction.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-5-5')" data-value="Multiplication."><span class="quiz-letter">D</span>Multiplication.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-5-5-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #15</div>
+      <div class="tag" data-source="Lesson 3 #15">Practice Question</div>
       <div class="pq">Rearrange 2×(37×50).</div>
-      <button onclick="toggleAnswer('w-Lesson3-15-1')">Check answer</button>
-      <div class="pa" id="w-Lesson3-15-1">(2×50)×37=100×37=3700.</div>
+      <div class="quiz-options" id="w-Lesson3-15-1-options" data-correct="(2×50)×37=100×37=3700."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-1')" data-value="(2×50)×37=100×37=3700."><span class="quiz-letter">A</span>(2×50)×37=100×37=3700.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-1')" data-value="3800."><span class="quiz-letter">B</span>3800.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-1')" data-value="3600."><span class="quiz-letter">C</span>3600.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-1')" data-value="2700."><span class="quiz-letter">D</span>2700.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-15-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #15</div>
+      <div class="tag" data-source="Lesson 3 #15">Practice Question</div>
       <div class="pq">What property lets you switch 37 and 25?</div>
-      <button onclick="toggleAnswer('w-Lesson3-15-2')">Check answer</button>
-      <div class="pa" id="w-Lesson3-15-2">Commutative Property of Multiplication.</div>
+      <div class="quiz-options" id="w-Lesson3-15-2-options" data-correct="Commutative Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-2')" data-value="Identity Property of Multiplication."><span class="quiz-letter">A</span>Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-2')" data-value="Associative Property of Multiplication."><span class="quiz-letter">B</span>Associative Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-2')" data-value="Zero Property of Multiplication."><span class="quiz-letter">C</span>Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-2')" data-value="Commutative Property of Multiplication."><span class="quiz-letter">D</span>Commutative Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-15-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #15</div>
+      <div class="tag" data-source="Lesson 3 #15">Practice Question</div>
       <div class="pq">What property lets you change 4×(37×25) into (4×25)×37 after reordering?</div>
-      <button onclick="toggleAnswer('w-Lesson3-15-3')">Check answer</button>
-      <div class="pa" id="w-Lesson3-15-3">Associative Property of Multiplication.</div>
+      <div class="quiz-options" id="w-Lesson3-15-3-options" data-correct="Associative Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-3')" data-value="Associative Property of Multiplication."><span class="quiz-letter">A</span>Associative Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-3')" data-value="Commutative Property of Multiplication."><span class="quiz-letter">B</span>Commutative Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-3')" data-value="Identity Property of Multiplication."><span class="quiz-letter">C</span>Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-3')" data-value="Zero Property of Multiplication."><span class="quiz-letter">D</span>Zero Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-15-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #15</div>
+      <div class="tag" data-source="Lesson 3 #15">Practice Question</div>
       <div class="pq">Rearrange 8×(15×125) for easier multiplication.</div>
-      <button onclick="toggleAnswer('w-Lesson3-15-4')">Check answer</button>
-      <div class="pa" id="w-Lesson3-15-4">(8×125)×15=1000×15=15000.</div>
+      <div class="quiz-options" id="w-Lesson3-15-4-options" data-correct="(8×125)×15=1000×15=15000."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-4')" data-value="(8×125)×15=1000×15=15000."><span class="quiz-letter">A</span>(8×125)×15=1000×15=15000.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-4')" data-value="16000."><span class="quiz-letter">B</span>16000.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-4')" data-value="12500."><span class="quiz-letter">C</span>12500.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-4')" data-value="14000."><span class="quiz-letter">D</span>14000.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-15-4-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #15</div>
+      <div class="tag" data-source="Lesson 3 #15">Practice Question</div>
       <div class="pq">Why can the product stay the same after reordering and regrouping?</div>
-      <button onclick="toggleAnswer('w-Lesson3-15-5')">Check answer</button>
-      <div class="pa" id="w-Lesson3-15-5">Multiplication is commutative and associative.</div>
+      <div class="quiz-options" id="w-Lesson3-15-5-options" data-correct="Multiplication is commutative and associative."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-5')" data-value="Multiplication is commutative and associative."><span class="quiz-letter">A</span>Multiplication is commutative and associative.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-5')" data-value="Multiplication is only associative."><span class="quiz-letter">B</span>Multiplication is only associative.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-5')" data-value="Multiplication is only commutative."><span class="quiz-letter">C</span>Multiplication is only commutative.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-15-5')" data-value="Multiplication is neither commutative nor associative."><span class="quiz-letter">D</span>Multiplication is neither commutative nor associative.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-15-5-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #25</div>
+      <div class="tag" data-source="Lesson 3 #25">Practice Question</div>
       <div class="pq">If 9x=9, solve x and name the property.</div>
-      <button onclick="toggleAnswer('w-Lesson3-25-1')">Check answer</button>
-      <div class="pa" id="w-Lesson3-25-1">x=1; Identity Property of Multiplication.</div>
+      <div class="quiz-options" id="w-Lesson3-25-1-options" data-correct="x=1; Identity Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-1')" data-value="x=1; Zero Property of Multiplication."><span class="quiz-letter">A</span>x=1; Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-1')" data-value="x=9; Identity Property of Multiplication."><span class="quiz-letter">B</span>x=9; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-1')" data-value="x=1; Identity Property of Multiplication."><span class="quiz-letter">C</span>x=1; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-1')" data-value="x=0; Zero Property of Multiplication."><span class="quiz-letter">D</span>x=0; Zero Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-25-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #25</div>
+      <div class="tag" data-source="Lesson 3 #25">Practice Question</div>
       <div class="pq">Complete: 63×___=63.</div>
-      <button onclick="toggleAnswer('w-Lesson3-25-2')">Check answer</button>
-      <div class="pa" id="w-Lesson3-25-2">1.</div>
+      <div class="quiz-options" id="w-Lesson3-25-2-options" data-correct="1."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-2')" data-value="2."><span class="quiz-letter">A</span>2.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-2')" data-value="63."><span class="quiz-letter">B</span>63.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-2')" data-value="1."><span class="quiz-letter">C</span>1.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-2')" data-value="0."><span class="quiz-letter">D</span>0.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-25-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #25</div>
+      <div class="tag" data-source="Lesson 3 #25">Practice Question</div>
       <div class="pq">What does the Identity Property of Multiplication say?</div>
-      <button onclick="toggleAnswer('w-Lesson3-25-3')">Check answer</button>
-      <div class="pa" id="w-Lesson3-25-3">Any number multiplied by 1 stays the same.</div>
+      <div class="quiz-options" id="w-Lesson3-25-3-options" data-correct="Any number multiplied by 1 stays the same."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-3')" data-value="Any number multiplied by itself doubles."><span class="quiz-letter">A</span>Any number multiplied by itself doubles.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-3')" data-value="Any number added to 0 stays the same."><span class="quiz-letter">B</span>Any number added to 0 stays the same.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-3')" data-value="Any number multiplied by 1 stays the same."><span class="quiz-letter">C</span>Any number multiplied by 1 stays the same.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-3')" data-value="Any number multiplied by 0 equals 0."><span class="quiz-letter">D</span>Any number multiplied by 0 equals 0.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-25-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #25</div>
+      <div class="tag" data-source="Lesson 3 #25">Practice Question</div>
       <div class="pq">If a×1=a, what number is the multiplicative identity?</div>
-      <button onclick="toggleAnswer('w-Lesson3-25-4')">Check answer</button>
-      <div class="pa" id="w-Lesson3-25-4">1.</div>
+      <div class="quiz-options" id="w-Lesson3-25-4-options" data-correct="1."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-4')" data-value="1."><span class="quiz-letter">A</span>1.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-4')" data-value="a."><span class="quiz-letter">B</span>a.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-4')" data-value="−1."><span class="quiz-letter">C</span>−1.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-4')" data-value="0."><span class="quiz-letter">D</span>0.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-25-4-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #25</div>
+      <div class="tag" data-source="Lesson 3 #25">Practice Question</div>
       <div class="pq">Why is t=1 in 5t=5?</div>
-      <button onclick="toggleAnswer('w-Lesson3-25-5')">Check answer</button>
-      <div class="pa" id="w-Lesson3-25-5">Because multiplying by 1 leaves 5 unchanged.</div>
+      <div class="quiz-options" id="w-Lesson3-25-5-options" data-correct="Because multiplying by 1 leaves 5 unchanged."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-5')" data-value="Because 5 divided by 5 is 1."><span class="quiz-letter">A</span>Because 5 divided by 5 is 1.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-5')" data-value="Because multiplying by 0 leaves 5 unchanged."><span class="quiz-letter">B</span>Because multiplying by 0 leaves 5 unchanged.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-5')" data-value="Because 1 is the biggest factor."><span class="quiz-letter">C</span>Because 1 is the biggest factor.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-25-5')" data-value="Because multiplying by 1 leaves 5 unchanged."><span class="quiz-letter">D</span>Because multiplying by 1 leaves 5 unchanged.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-25-5-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #27</div>
+      <div class="tag" data-source="Lesson 3 #27">Practice Question</div>
       <div class="pq">If 6n=0, solve for n and name the property.</div>
-      <button onclick="toggleAnswer('w-Lesson3-27-1')">Check answer</button>
-      <div class="pa" id="w-Lesson3-27-1">n=0; Zero Property of Multiplication.</div>
+      <div class="quiz-options" id="w-Lesson3-27-1-options" data-correct="n=0; Zero Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-1')" data-value="n=0; Zero Property of Multiplication."><span class="quiz-letter">A</span>n=0; Zero Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-1')" data-value="n=1; Identity Property of Multiplication."><span class="quiz-letter">B</span>n=1; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-1')" data-value="n=0; Identity Property of Multiplication."><span class="quiz-letter">C</span>n=0; Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-1')" data-value="n=6; Zero Property of Multiplication."><span class="quiz-letter">D</span>n=6; Zero Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-27-1-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #27</div>
+      <div class="tag" data-source="Lesson 3 #27">Practice Question</div>
       <div class="pq">What happens when any number is multiplied by 0?</div>
-      <button onclick="toggleAnswer('w-Lesson3-27-2')">Check answer</button>
-      <div class="pa" id="w-Lesson3-27-2">The product is 0.</div>
+      <div class="quiz-options" id="w-Lesson3-27-2-options" data-correct="The product is 0."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-2')" data-value="The product doubles."><span class="quiz-letter">A</span>The product doubles.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-2')" data-value="The product is 0."><span class="quiz-letter">B</span>The product is 0.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-2')" data-value="The product becomes negative."><span class="quiz-letter">C</span>The product becomes negative.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-2')" data-value="The product stays the same."><span class="quiz-letter">D</span>The product stays the same.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-27-2-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #27</div>
+      <div class="tag" data-source="Lesson 3 #27">Practice Question</div>
       <div class="pq">What is the Zero Property of Multiplication?</div>
-      <button onclick="toggleAnswer('w-Lesson3-27-3')">Check answer</button>
-      <div class="pa" id="w-Lesson3-27-3">Any number multiplied by 0 equals 0.</div>
+      <div class="quiz-options" id="w-Lesson3-27-3-options" data-correct="Any number multiplied by 0 equals 0."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-3')" data-value="Any number multiplied by 0 equals 0."><span class="quiz-letter">A</span>Any number multiplied by 0 equals 0.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-3')" data-value="Any number multiplied by 1 stays the same."><span class="quiz-letter">B</span>Any number multiplied by 1 stays the same.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-3')" data-value="Any number added to 0 equals 0."><span class="quiz-letter">C</span>Any number added to 0 equals 0.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-3')" data-value="Any number multiplied by 0 equals 1."><span class="quiz-letter">D</span>Any number multiplied by 0 equals 1.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-27-3-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #27</div>
+      <div class="tag" data-source="Lesson 3 #27">Practice Question</div>
       <div class="pq">If a×0=0, what number makes the product zero?</div>
-      <button onclick="toggleAnswer('w-Lesson3-27-4')">Check answer</button>
-      <div class="pa" id="w-Lesson3-27-4">0.</div>
+      <div class="quiz-options" id="w-Lesson3-27-4-options" data-correct="0."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-4')" data-value="0."><span class="quiz-letter">A</span>0.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-4')" data-value="a."><span class="quiz-letter">B</span>a.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-4')" data-value="1."><span class="quiz-letter">C</span>1.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-4')" data-value="−1."><span class="quiz-letter">D</span>−1.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-27-4-feedback"></div>
     </div><div class="practice-card">
-      <div class="tag">Lesson 3 #27</div>
+      <div class="tag" data-source="Lesson 3 #27">Practice Question</div>
       <div class="pq">Which property explains 999×0=0?</div>
-      <button onclick="toggleAnswer('w-Lesson3-27-5')">Check answer</button>
-      <div class="pa" id="w-Lesson3-27-5">Zero Property of Multiplication.</div>
+      <div class="quiz-options" id="w-Lesson3-27-5-options" data-correct="Zero Property of Multiplication."><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-5')" data-value="Associative Property of Multiplication."><span class="quiz-letter">A</span>Associative Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-5')" data-value="Commutative Property of Multiplication."><span class="quiz-letter">B</span>Commutative Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-5')" data-value="Identity Property of Multiplication."><span class="quiz-letter">C</span>Identity Property of Multiplication.</button><button class="quiz-opt" onclick="selectOption(this,'w-Lesson3-27-5')" data-value="Zero Property of Multiplication."><span class="quiz-letter">D</span>Zero Property of Multiplication.</button></div>
+      <div class="quiz-feedback" id="w-Lesson3-27-5-feedback"></div>
     </div></div>
 </section>
 </main>
 <script>
-function toggleAnswer(id){const el=document.getElementById(id);el.style.display=(el.style.display==='block')?'none':'block';}
+function selectOption(btn, cid) {
+  const container = document.getElementById(cid + '-options');
+  if (container.classList.contains('answered')) return;
+  container.classList.add('answered');
+  const correct = container.dataset.correct;
+  const chosen = btn.dataset.value;
+  container.querySelectorAll('.quiz-opt').forEach(b => {
+    b.classList.add('disabled');
+    if (b.dataset.value === correct) b.classList.add('correct');
+  });
+  const isRight = chosen === correct;
+  if (!isRight) btn.classList.add('incorrect');
+  const tag = document.getElementById(cid + '-options').closest('.practice-card').querySelector('.tag');
+  const source = tag ? tag.dataset.source : '';
+  const feedback = document.getElementById(cid + '-feedback');
+  feedback.textContent = (isRight ? '✅ Correct!' : `❌ Not quite — the answer is "${correct}"`) + (source ? ` (${source})` : '');
+  feedback.style.color = isRight ? '#1f8a53' : '#a32634';
+
+  const progress = loadProgress();
+  progress[cid] = isRight ? 'right' : 'wrong';
+  saveProgress(progress);
+  const grid = container.closest('.practice-grid');
+  if (grid) updateSummary(grid.id);
+}
+function shuffleGrid(gridId, label) {
+  const grid = document.getElementById(gridId);
+  const cards = Array.from(grid.children);
+  for (let i = cards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [cards[i], cards[j]] = [cards[j], cards[i]];
+  }
+  cards.forEach((card, i) => {
+    grid.appendChild(card);
+    const tag = card.querySelector('.tag');
+    if (tag) tag.textContent = `${label} ${i + 1}`;
+  });
+}
+function loadProgress() {
+  try { return JSON.parse(localStorage.getItem('mathProgress') || '{}'); }
+  catch (e) { return {}; }
+}
+function saveProgress(p) {
+  try { localStorage.setItem('mathProgress', JSON.stringify(p)); } catch (e) {}
+}
+function resetProgress(gridId) {
+  const progress = loadProgress();
+  const grid = document.getElementById(gridId);
+  Array.from(grid.querySelectorAll('.quiz-options')).forEach(opts => {
+    const cid = opts.id.replace(/-options$/, '');
+    delete progress[cid];
+    opts.classList.remove('answered');
+    opts.querySelectorAll('.quiz-opt').forEach(b => b.classList.remove('correct', 'incorrect', 'disabled'));
+    const feedback = document.getElementById(cid + '-feedback');
+    if (feedback) feedback.textContent = '';
+  });
+  saveProgress(progress);
+  updateSummary(gridId);
+}
+function updateSummary(gridId) {
+  const grid = document.getElementById(gridId);
+  const cards = Array.from(grid.children);
+  const progress = loadProgress();
+  let right = 0, wrong = 0, answered = 0;
+  const weak = [];
+  cards.forEach(card => {
+    const opts = card.querySelector('.quiz-options');
+    if (!opts) return;
+    const cid = opts.id.replace(/-options$/, '');
+    const correct = opts.dataset.correct;
+    const r = progress[cid];
+    if (r) {
+      answered++;
+      if (r === 'right') right++;
+      else { wrong++; weak.push(correct); }
+      if (!opts.classList.contains('answered')) {
+        opts.classList.add('answered');
+        opts.querySelectorAll('.quiz-opt').forEach(b => {
+          b.classList.add('disabled');
+          if (b.dataset.value === correct) b.classList.add('correct');
+        });
+        const feedback = document.getElementById(cid + '-feedback');
+        if (feedback) {
+          feedback.textContent = r === 'right' ? '✅ Correct!' : `❌ Not quite — the answer is "${correct}"`;
+          feedback.style.color = r === 'right' ? '#1f8a53' : '#a32634';
+        }
+      }
+    }
+  });
+  const summaryEl = document.getElementById(gridId + '-summary');
+  if (!summaryEl) return;
+  summaryEl.querySelector('.progress-tally').textContent = `${answered}/${cards.length} answered · ${right} correct · ${wrong} need review`;
+  const panel = summaryEl.querySelector('.weak-word-panel');
+  const list = summaryEl.querySelector('.weak-word-list');
+  if (wrong > 0) {
+    panel.style.display = 'block';
+    list.innerHTML = [...new Set(weak)].map(w => `<span>${w}</span>`).join('');
+  } else {
+    panel.style.display = 'none';
+  }
+}
+function printBlank() { document.body.classList.add('print-blank'); window.print(); }
+function printAnswerKey() { document.body.classList.remove('print-blank'); window.print(); }
+window.addEventListener('afterprint', function () { document.body.classList.remove('print-blank'); });
+
+shuffleGrid('today-grid', 'Practice Question');
+shuffleGrid('weekend-grid', 'Weekend Question');
+updateSummary('today-grid');
+updateSummary('weekend-grid');
 </script></body></html>
