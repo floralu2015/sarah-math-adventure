@@ -739,7 +739,7 @@ updateSummary('weekend-grid');
 <header><div class="hero"><div style="font-size:40px">➕➖✖️➗🧠✨</div><span class="datepill">August 25, 2026 · Lesson 4</span><h1>Sarah's Math Homework Adventure</h1>
 <p>Today's Lesson 4 homework recreated from the uploaded Saxon Math pages, with Sarah's odd-numbered work checked, corrections explained slowly, and new practice focused only on the places that need attention.</p></div></header>
 <main>
-<nav><a href="#l4-dashboard">Dashboard</a><a href="#l4-corrections">Fix-It Zone</a><a href="#l4-practice">Target Practice</a><a href="#l4-answers">Graded Answers</a><a href="#l4-textbook">Lesson 4</a></nav>
+<nav><a href="#l4-dashboard">Dashboard</a><a href="#l4-corrections">Fix-It Zone</a><a href="#l4-practice">Today's Practice</a><a href="#l4-answers">Graded Answers</a><a href="#l4-textbook">Lesson 4</a><a href="#l4-weekend">Weekend</a></nav>
 
 <section class="section" id="l4-dashboard">
 <div class="kicker">Today's dashboard</div><h2>🌟 How Sarah did</h2>
@@ -802,67 +802,87 @@ updateSummary('weekend-grid');
     </article>
 </section>
 
-<section class="section"><div class="kicker">Slow-step plan</div><h2>🧭 Do this in three short rounds</h2>
-<div class="plan">
-<div class="plan-card"><strong>1</strong><h3>Fix</h3><p><b>Redo these five questions:</b></p>
-<ol>
-<li><b>#3:</b> The 5 km (5000 meters) hiking trail will have markers placed every 800 m. How many markers will be used? Explain why your answer is reasonable.</li>
-<li><b>#5:</b> There are a total of two hundred students and chaperones going on a field trip. Each bus can hold 60 passengers. How many buses will be used for the field trip? Explain why your answer is reasonable.</li>
-<li><b>#19:</b> Refer to 3 + 5 = 8 and 17 − 7 = 10. Which number is the sum? Which number is the difference?</li>
-<li><b>#21:</b> Simplify and compare: 12 − 5 ○ 5 − 12.</li>
-<li><b>#29:</b> Consider the sets of integers and counting numbers. Which set includes the other set of numbers?</li>
-</ol></div>
-<div class="plan-card"><strong>2</strong><h3>Practice</h3><p>Do the 15 mini problems below. Solve first, then reveal the answer.</p></div>
-<div class="plan-card"><strong>3</strong><h3>Check</h3><p>Ask: “Did I answer every part? Did I use the right vocabulary? Does the story make sense?”</p></div>
-</div></section>
 
-<section class="section" id="l4-practice"><div class="kicker">Target practice</div><h2>🎮 15 similar questions</h2>
-<p>Solve each one on paper first. Then tap <b>Check answer</b>.</p><div class="practice-grid"><div class="practice-card">
-      <div class="tag">#3 Remainders</div><div class="pq">A 4,300 m trail has a marker every 700 m. How many markers fit before the trail ends?</div>
-      <button onclick="toggleAnswer('l4-p1')">Check answer</button>
-      <div class="pa" id="l4-p1">6 markers. 4300 ÷ 700 = 6 remainder 100.</div></div><div class="practice-card">
-      <div class="tag">#3 Remainders</div><div class="pq">A 2,650 m path has signs every 500 m. How many signs fit?</div>
-      <button onclick="toggleAnswer('l4-p2')">Check answer</button>
-      <div class="pa" id="l4-p2">5 signs. 2650 ÷ 500 = 5 remainder 150.</div></div><div class="practice-card">
-      <div class="tag">#3 Remainders</div><div class="pq">Why does a remainder not always mean &#x27;round up&#x27;?</div>
-      <button onclick="toggleAnswer('l4-p3')">Check answer</button>
-      <div class="pa" id="l4-p3">Because you only round up when the situation requires one more whole group, such as buses. A marker every fixed distance cannot be placed beyond the trail.</div></div><div class="practice-card">
-      <div class="tag">#5 Rounding Up</div><div class="pq">145 students ride buses that hold 50 each. How many buses are needed? Explain.</div>
-      <button onclick="toggleAnswer('l4-p4')">Check answer</button>
-      <div class="pa" id="l4-p4">3 buses. Two hold only 100; the remaining 45 need a third bus.</div></div><div class="practice-card">
-      <div class="tag">#5 Rounding Up</div><div class="pq">181 people need vans that hold 30 each. How many vans?</div>
-      <button onclick="toggleAnswer('l4-p5')">Check answer</button>
-      <div class="pa" id="l4-p5">7 vans. Six hold 180, so one person still needs a seat.</div></div><div class="practice-card">
-      <div class="tag">#5 Rounding Up</div><div class="pq">When should a remainder make you round up?</div>
-      <button onclick="toggleAnswer('l4-p6')">Check answer</button>
-      <div class="pa" id="l4-p6">When every person/item must fit into a whole container, vehicle, group, etc.</div></div><div class="practice-card">
-      <div class="tag">#19 Vocabulary</div><div class="pq">In 9 + 6 = 15, what number is the sum?</div>
-      <button onclick="toggleAnswer('l4-p7')">Check answer</button>
-      <div class="pa" id="l4-p7">15.</div></div><div class="practice-card">
-      <div class="tag">#19 Vocabulary</div><div class="pq">In 22 − 8 = 14, what number is the difference?</div>
-      <button onclick="toggleAnswer('l4-p8')">Check answer</button>
-      <div class="pa" id="l4-p8">14.</div></div><div class="practice-card">
-      <div class="tag">#19 Vocabulary</div><div class="pq">Which word belongs to subtraction: sum or difference?</div>
-      <button onclick="toggleAnswer('l4-p9')">Check answer</button>
-      <div class="pa" id="l4-p9">Difference.</div></div><div class="practice-card">
-      <div class="tag">#21 Integers</div><div class="pq">Compare: 15 − 8 ○ 8 − 15.</div>
-      <button onclick="toggleAnswer('l4-p10')">Check answer</button>
-      <div class="pa" id="l4-p10">7 &gt; −7, so &gt;.</div></div><div class="practice-card">
-      <div class="tag">#21 Integers</div><div class="pq">Compare: 9 − 12 ○ 12 − 9.</div>
-      <button onclick="toggleAnswer('l4-p11')">Check answer</button>
-      <div class="pa" id="l4-p11">−3 &lt; 3, so &lt;.</div></div><div class="practice-card">
-      <div class="tag">#21 Integers</div><div class="pq">Simplify both sides first: 20 − 5 ○ 5 − 20.</div>
-      <button onclick="toggleAnswer('l4-p12')">Check answer</button>
-      <div class="pa" id="l4-p12">15 &gt; −15.</div></div><div class="practice-card">
-      <div class="tag">#29 Sets</div><div class="pq">Which set is larger: counting numbers or integers?</div>
-      <button onclick="toggleAnswer('l4-p13')">Check answer</button>
-      <div class="pa" id="l4-p13">Integers.</div></div><div class="practice-card">
-      <div class="tag">#29 Sets</div><div class="pq">Is −4 a counting number, whole number, or integer?</div>
-      <button onclick="toggleAnswer('l4-p14')">Check answer</button>
-      <div class="pa" id="l4-p14">Integer only.</div></div><div class="practice-card">
-      <div class="tag">#29 Sets</div><div class="pq">Why do integers include counting numbers?</div>
-      <button onclick="toggleAnswer('l4-p15')">Check answer</button>
-      <div class="pa" id="l4-p15">Every counting number 1,2,3,… is also an integer; integers additionally include 0 and negative whole-number values.</div></div></div></section>
+<section class="section" id="l4-practice"><div class="kicker">Practice today</div><h2>🎮 3 similar questions for each focus problem</h2>
+<p>It's a quiz! There are <b>15 questions</b> — solve each one in your head or on paper, then tap the answer you think is correct. <button class="shuffle-btn" onclick="shuffleGrid('l4-today-grid','Practice Question')">🔀 Shuffle order</button></p>
+<div class="progress-summary" id="l4-today-grid-summary"><span class="progress-tally">0/15 answered · 0 correct · 0 need review</span><button class="reset-progress" onclick="resetProgress('l4-today-grid')">↺ Reset progress</button><div class="weak-word-panel" style="display:none"><div class="weak-word-panel-title">📋 Answers to review</div><div class="weak-word-list"></div></div></div>
+<div class="practice-grid" id="l4-today-grid"><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #3">Practice Question</div>
+      <div class="pq">A 4,300 m trail has a marker every 700 m. How many markers fit before the trail ends?</div>
+      <div class="quiz-options" id="l4t-Lesson4-3-1-options" data-correct="6 markers. 4300÷700=6 remainder 100."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-1')" data-value="7 markers. Rounding the division up to the next whole number."><span class="quiz-letter">A</span>7 markers. Rounding the division up to the next whole number.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-1')" data-value="43 markers. Dividing by 100 instead of 700."><span class="quiz-letter">B</span>43 markers. Dividing by 100 instead of 700.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-1')" data-value="6 markers. 4300÷700=6 remainder 100."><span class="quiz-letter">C</span>6 markers. 4300÷700=6 remainder 100.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-1')" data-value="6 markers, but only if there's no remainder."><span class="quiz-letter">D</span>6 markers, but only if there's no remainder.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-3-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #3">Practice Question</div>
+      <div class="pq">A 2,650 m path has signs every 500 m. How many signs fit?</div>
+      <div class="quiz-options" id="l4t-Lesson4-3-2-options" data-correct="5 signs. 2650÷500=5 remainder 150."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-2')" data-value="6 signs. Rounding up because of the remainder."><span class="quiz-letter">A</span>6 signs. Rounding up because of the remainder.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-2')" data-value="26 signs. Dividing by 100 instead of 500."><span class="quiz-letter">B</span>26 signs. Dividing by 100 instead of 500.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-2')" data-value="5 signs, but the path needs to be exactly 2,500 m."><span class="quiz-letter">C</span>5 signs, but the path needs to be exactly 2,500 m.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-2')" data-value="5 signs. 2650÷500=5 remainder 150."><span class="quiz-letter">D</span>5 signs. 2650÷500=5 remainder 150.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-3-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #3">Practice Question</div>
+      <div class="pq">Why doesn't a remainder always mean you should round up?</div>
+      <div class="quiz-options" id="l4t-Lesson4-3-3-options" data-correct="Because you only round up when you need one more whole group to fit everyone or everything; a fixed-distance marker can't be placed past the end of the trail."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-3')" data-value="Because you should always round down no matter what the problem asks."><span class="quiz-letter">A</span>Because you should always round down no matter what the problem asks.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-3')" data-value="Because remainders should always be ignored."><span class="quiz-letter">B</span>Because remainders should always be ignored.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-3')" data-value="Because remainders only matter in money problems."><span class="quiz-letter">C</span>Because remainders only matter in money problems.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-3-3')" data-value="Because you only round up when you need one more whole group to fit everyone or everything; a fixed-distance marker can't be placed past the end of the trail."><span class="quiz-letter">D</span>Because you only round up when you need one more whole group to fit everyone or everything; a fixed-distance marker can't be placed past the end of the trail.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-3-3-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #5">Practice Question</div>
+      <div class="pq">145 students ride buses that hold 50 each. How many buses are needed? Explain.</div>
+      <div class="quiz-options" id="l4t-Lesson4-5-1-options" data-correct="3 buses. Two buses hold only 100 students; the remaining 45 need a third bus."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-1')" data-value="1 bus, since 50 is close to 145."><span class="quiz-letter">A</span>1 bus, since 50 is close to 145.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-1')" data-value="3 buses, with no students left over."><span class="quiz-letter">B</span>3 buses, with no students left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-1')" data-value="3 buses. Two buses hold only 100 students; the remaining 45 need a third bus."><span class="quiz-letter">C</span>3 buses. Two buses hold only 100 students; the remaining 45 need a third bus.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-1')" data-value="2 buses. 145÷50 rounds down to 2."><span class="quiz-letter">D</span>2 buses. 145÷50 rounds down to 2.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-5-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #5">Practice Question</div>
+      <div class="pq">181 people need vans that hold 30 each. How many vans?</div>
+      <div class="quiz-options" id="l4t-Lesson4-5-2-options" data-correct="7 vans. Six vans hold 180 people, so one person still needs a seat."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-2')" data-value="18 vans. Dividing by 10 instead of 30."><span class="quiz-letter">A</span>18 vans. Dividing by 10 instead of 30.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-2')" data-value="7 vans, with exactly 0 people left over."><span class="quiz-letter">B</span>7 vans, with exactly 0 people left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-2')" data-value="6 vans. 181÷30 rounds down to 6."><span class="quiz-letter">C</span>6 vans. 181÷30 rounds down to 6.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-2')" data-value="7 vans. Six vans hold 180 people, so one person still needs a seat."><span class="quiz-letter">D</span>7 vans. Six vans hold 180 people, so one person still needs a seat.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-5-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #5">Practice Question</div>
+      <div class="pq">When should a remainder make you round up?</div>
+      <div class="quiz-options" id="l4t-Lesson4-5-3-options" data-correct="When every person or item must fit into a whole container, vehicle, or group — nobody and nothing can be left out."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-3')" data-value="Only when the remainder is bigger than 5."><span class="quiz-letter">A</span>Only when the remainder is bigger than 5.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-3')" data-value="Never — remainders are always dropped."><span class="quiz-letter">B</span>Never — remainders are always dropped.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-3')" data-value="When every person or item must fit into a whole container, vehicle, or group — nobody and nothing can be left out."><span class="quiz-letter">C</span>When every person or item must fit into a whole container, vehicle, or group — nobody and nothing can be left out.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-5-3')" data-value="Only when there's an addition problem, not division."><span class="quiz-letter">D</span>Only when there's an addition problem, not division.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-5-3-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #19">Practice Question</div>
+      <div class="pq">In 9 + 6 = 15, what number is the sum?</div>
+      <div class="quiz-options" id="l4t-Lesson4-19-1-options" data-correct="15."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-1')" data-value="21."><span class="quiz-letter">A</span>21.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-1')" data-value="15."><span class="quiz-letter">B</span>15.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-1')" data-value="6."><span class="quiz-letter">C</span>6.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-1')" data-value="9."><span class="quiz-letter">D</span>9.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-19-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #19">Practice Question</div>
+      <div class="pq">In 22 − 8 = 14, what number is the difference?</div>
+      <div class="quiz-options" id="l4t-Lesson4-19-2-options" data-correct="14."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-2')" data-value="30."><span class="quiz-letter">A</span>30.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-2')" data-value="22."><span class="quiz-letter">B</span>22.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-2')" data-value="8."><span class="quiz-letter">C</span>8.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-2')" data-value="14."><span class="quiz-letter">D</span>14.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-19-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #19">Practice Question</div>
+      <div class="pq">Which word belongs to subtraction: sum or difference?</div>
+      <div class="quiz-options" id="l4t-Lesson4-19-3-options" data-correct="Difference."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-3')" data-value="Sum."><span class="quiz-letter">A</span>Sum.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-19-3')" data-value="Difference."><span class="quiz-letter">B</span>Difference.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-19-3-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #21">Practice Question</div>
+      <div class="pq">Compare: 15 − 8 ○ 8 − 15.</div>
+      <div class="quiz-options" id="l4t-Lesson4-21-1-options" data-correct="7 > −7, so >."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-1')" data-value="−7 > 7, so >."><span class="quiz-letter">A</span>−7 > 7, so >.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-1')" data-value="7 < −7, so <."><span class="quiz-letter">B</span>7 < −7, so <.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-1')" data-value="7 = −7, so =."><span class="quiz-letter">C</span>7 = −7, so =.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-1')" data-value="7 > −7, so >."><span class="quiz-letter">D</span>7 > −7, so >.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-21-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #21">Practice Question</div>
+      <div class="pq">Compare: 9 − 12 ○ 12 − 9.</div>
+      <div class="quiz-options" id="l4t-Lesson4-21-2-options" data-correct="−3 < 3, so <."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-2')" data-value="3 < −3, so <."><span class="quiz-letter">A</span>3 < −3, so <.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-2')" data-value="3 = −3, so =."><span class="quiz-letter">B</span>3 = −3, so =.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-2')" data-value="−3 > 3, so >."><span class="quiz-letter">C</span>−3 > 3, so >.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-2')" data-value="−3 < 3, so <."><span class="quiz-letter">D</span>−3 < 3, so <.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-21-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #21">Practice Question</div>
+      <div class="pq">Simplify both sides first: 20 − 5 ○ 5 − 20.</div>
+      <div class="quiz-options" id="l4t-Lesson4-21-3-options" data-correct="15 > −15, so >."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-3')" data-value="−15 > 15, so >."><span class="quiz-letter">A</span>−15 > 15, so >.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-3')" data-value="15 = −15, so =."><span class="quiz-letter">B</span>15 = −15, so =.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-3')" data-value="15 < −15, so <."><span class="quiz-letter">C</span>15 < −15, so <.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-21-3')" data-value="15 > −15, so >."><span class="quiz-letter">D</span>15 > −15, so >.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-21-3-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #29">Practice Question</div>
+      <div class="pq">Which set is larger: counting numbers or integers?</div>
+      <div class="quiz-options" id="l4t-Lesson4-29-1-options" data-correct="Integers."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-1')" data-value="Integers."><span class="quiz-letter">A</span>Integers.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-1')" data-value="Counting numbers."><span class="quiz-letter">B</span>Counting numbers.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-29-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #29">Practice Question</div>
+      <div class="pq">Is −4 a counting number, whole number, or integer?</div>
+      <div class="quiz-options" id="l4t-Lesson4-29-2-options" data-correct="Integer only."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-2')" data-value="Integer only."><span class="quiz-letter">A</span>Integer only.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-2')" data-value="Whole number only."><span class="quiz-letter">B</span>Whole number only.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-2')" data-value="Counting number only."><span class="quiz-letter">C</span>Counting number only.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-2')" data-value="All three."><span class="quiz-letter">D</span>All three.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-29-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #29">Practice Question</div>
+      <div class="pq">Why do integers include counting numbers?</div>
+      <div class="quiz-options" id="l4t-Lesson4-29-3-options" data-correct="Every counting number 1, 2, 3, … is also an integer; integers additionally include 0 and negative whole-number values."><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-3')" data-value="They don't — integers are a completely separate set."><span class="quiz-letter">A</span>They don't — integers are a completely separate set.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-3')" data-value="Every counting number 1, 2, 3, … is also an integer; integers additionally include 0 and negative whole-number values."><span class="quiz-letter">B</span>Every counting number 1, 2, 3, … is also an integer; integers additionally include 0 and negative whole-number values.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-3')" data-value="Because counting numbers include negative numbers too."><span class="quiz-letter">C</span>Because counting numbers include negative numbers too.</button><button class="quiz-opt" onclick="selectOption(this,'l4t-Lesson4-29-3')" data-value="Because integers and counting numbers are actually two names for the same set."><span class="quiz-letter">D</span>Because integers and counting numbers are actually two names for the same set.</button></div>
+      <div class="quiz-feedback" id="l4t-Lesson4-29-3-feedback"></div>
+    </div></div>
+</section>
 
 <section class="section" id="l4-answers"><div class="kicker">Grading detail</div><h2>📊 Sarah's odd-numbered Lesson 4 answers</h2>
 <div class="table-wrap"><table><thead><tr><th>#</th><th>Full question</th><th>Sarah wrote</th><th>Correct / complete</th><th>Result</th><th>Why</th></tr></thead><tbody><tr class="correct"><td>1</td><td class="question-cell">The band marched in 14 rows with an equal number of members in each row. If there were 98 members in the band, how many members were in each row?</td><td>7 members</td><td>7 members</td><td><span class="status correct">Correct</span></td><td>98 ÷ 14 = 7.</td></tr><tr class="incorrect"><td>3</td><td class="question-cell">The 5 km (5000 meters) hiking trail will have markers placed every 800 m. How many markers will be used? Explain why your answer is reasonable.</td><td>7 markers</td><td>6 markers</td><td><span class="status incorrect">Fix</span></td><td>5000 ÷ 800 = 6 remainder 200, so markers fit at 800, 1600, 2400, 3200, 4000, and 4800 meters.</td></tr><tr class="partial"><td>5</td><td class="question-cell">There are a total of two hundred students and chaperones going on a field trip. Each bus can hold 60 passengers. How many buses will be used for the field trip? Explain why your answer is reasonable.</td><td>4 buses</td><td>4 buses, because 3 buses hold only 180 people and a 4th bus is needed for the remaining 20</td><td><span class="status partial">Partial</span></td><td>The number is right. The problem also asks for an explanation.</td></tr><tr class="correct"><td>7</td><td class="question-cell">Zoe, Ella, and Mae ate lunch at the deli. The cost of Zoe’s meal was $8, Ella’s was $9, and Mae’s was $7. What was the total of their bill (before tax)?</td><td>$24</td><td>$24</td><td><span class="status correct">Correct</span></td><td>8 + 9 + 7 = 24.</td></tr><tr class="correct"><td>9</td><td class="question-cell">Write a word problem for this equation: $5 − p = $1.50.</td><td>A $5 budget with $1.50 left; spent $3.50</td><td>Any word problem matching $5 − p = $1.50; p = $3.50</td><td><span class="status correct">Correct</span></td><td>Sarah&#x27;s story matches the equation.</td></tr><tr class="correct"><td>11</td><td class="question-cell">Arrange these numbers from least to greatest: −1, 2, −3, −4, 5.</td><td>−4, −3, −1, 2, 5</td><td>−4, −3, −1, 2, 5</td><td><span class="status correct">Correct</span></td><td>Correct least-to-greatest order.</td></tr><tr class="correct"><td>13</td><td class="question-cell">Compare: a. |−7| ○ |−8|   b. |11| ○ |−11|.</td><td>a &lt; ; b =</td><td>a &lt; ; b =</td><td><span class="status correct">Correct</span></td><td>|−7|=7 and |−8|=8; |11|=|−11|=11.</td></tr><tr class="correct"><td>15</td><td class="question-cell">Which two integer values for n make this equation true? |n| = 1.</td><td>1 and −1</td><td>1 and −1</td><td><span class="status correct">Correct</span></td><td>Both integers have absolute value 1.</td></tr><tr class="correct"><td>17</td><td class="question-cell">Graph the set of odd numbers on a number line.</td><td>Number line showing odd integers</td><td>…, −5, −3, −1, 1, 3, 5, …</td><td><span class="status correct">Correct</span></td><td>The graph shows the odd-integer pattern; 0 is only the center label, not an odd-number point.</td></tr><tr class="incorrect"><td>19</td><td class="question-cell">Refer to these expressions: 3 + 5 = 8 and 17 − 7 = 10. a. Which number is the sum? b. Which number is the difference?</td><td>a 8 ; b 7</td><td>a 8 ; b 10</td><td><span class="status incorrect">Fix</span></td><td>The sum is 8. The difference in 17 − 7 = 10 is 10, not 7.</td></tr><tr class="partial"><td>21</td><td class="question-cell">Simplify and compare: 12 − 5 ○ 5 − 12.</td><td>7</td><td>7 &gt; −7</td><td><span class="status partial">Partial</span></td><td>12−5=7 and 5−12=−7, so 7 &gt; −7. The comparison symbol is required.</td></tr><tr class="correct"><td>23</td><td class="question-cell">If 2 + 4 = 6, then what other addition fact and what two subtraction facts are true for 2, 4, and 6?</td><td>4+2=6; 6−4=2; 6−2=4</td><td>4+2=6; 6−2=4; 6−4=2</td><td><span class="status correct">Correct</span></td><td>All three requested related facts are present.</td></tr><tr class="correct"><td>25</td><td class="question-cell">Which is the greater total: 4 groups of 20 or 5 groups of 15?</td><td>80</td><td>4 groups of 20 = 80, which is greater than 5 groups of 15 = 75</td><td><span class="status correct">Correct</span></td><td>80 &gt; 75.</td></tr><tr class="correct"><td>27</td><td class="question-cell">Which total cost is less: 25 tickets for $5 each or 20 tickets for $6 each?</td><td>20 tickets for $6 each</td><td>20 tickets for $6 each ($120), because 25 tickets at $5 each cost $125</td><td><span class="status correct">Correct</span></td><td>$120 is less than $125.</td></tr><tr class="incorrect"><td>29</td><td class="question-cell">Consider the sets of integers and counting numbers. Which set includes the other set of numbers?</td><td>counting numbers</td><td>Integers</td><td><span class="status incorrect">Fix</span></td><td>The set of integers includes all counting numbers, plus 0 and negative integers.</td></tr></tbody></table></div>
@@ -933,6 +953,136 @@ updateSummary('weekend-grid');
     <div class="pa" id="l4-a30">−1/2 and 1/2</div></div></div></div></article>
 </section>
 
+<section class="section" id="l4-weekend"><div class="kicker">Weekend reinforcement</div><h2>🌈 5 more questions for each focus problem</h2>
+<div class="weekend-note">These are separate from today's required practice. Use them later for quick reinforcement of the same concepts. <button class="shuffle-btn" onclick="shuffleGrid('l4-weekend-grid','Weekend Question')">🔀 Shuffle order</button></div>
+<div class="progress-summary" id="l4-weekend-grid-summary"><span class="progress-tally">0/25 answered · 0 correct · 0 need review</span><button class="reset-progress" onclick="resetProgress('l4-weekend-grid')">↺ Reset progress</button><div class="weak-word-panel" style="display:none"><div class="weak-word-panel-title">📋 Answers to review</div><div class="weak-word-list"></div></div></div>
+<div class="practice-grid" id="l4-weekend-grid" style="margin-top:14px"><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #3">Practice Question</div>
+      <div class="pq">A 3,600 m trail has a marker every 900 m. How many markers fit, and is there a remainder?</div>
+      <div class="quiz-options" id="l4w-Lesson4-3-1-options" data-correct="4 markers, no remainder (3600÷900=4 exactly)."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-1')" data-value="4 markers, with 100 m left over."><span class="quiz-letter">A</span>4 markers, with 100 m left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-1')" data-value="5 markers, rounding up."><span class="quiz-letter">B</span>5 markers, rounding up.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-1')" data-value="4 markers, no remainder (3600÷900=4 exactly)."><span class="quiz-letter">C</span>4 markers, no remainder (3600÷900=4 exactly).</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-1')" data-value="3 markers, with 900 m left over."><span class="quiz-letter">D</span>3 markers, with 900 m left over.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-3-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #3">Practice Question</div>
+      <div class="pq">A 6,200 m road has mile-markers every 1,000 m. How many fit, and how much road is left over?</div>
+      <div class="quiz-options" id="l4w-Lesson4-3-2-options" data-correct="6 markers; 200 m left over (6200÷1000=6 remainder 200)."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-2')" data-value="7 markers; 0 m left over."><span class="quiz-letter">A</span>7 markers; 0 m left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-2')" data-value="62 markers; 0 m left over."><span class="quiz-letter">B</span>62 markers; 0 m left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-2')" data-value="6 markers; 1,000 m left over."><span class="quiz-letter">C</span>6 markers; 1,000 m left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-2')" data-value="6 markers; 200 m left over (6200÷1000=6 remainder 200)."><span class="quiz-letter">D</span>6 markers; 200 m left over (6200÷1000=6 remainder 200).</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-3-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #3">Practice Question</div>
+      <div class="pq">A 990 m fence needs a post every 150 m. How many posts fit, and what's left over?</div>
+      <div class="quiz-options" id="l4w-Lesson4-3-3-options" data-correct="6 posts; 90 m left over (990÷150=6 remainder 90)."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-3')" data-value="6 posts; 150 m left over."><span class="quiz-letter">A</span>6 posts; 150 m left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-3')" data-value="7 posts; 0 m left over."><span class="quiz-letter">B</span>7 posts; 0 m left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-3')" data-value="9 posts; 90 m left over."><span class="quiz-letter">C</span>9 posts; 90 m left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-3')" data-value="6 posts; 90 m left over (990÷150=6 remainder 90)."><span class="quiz-letter">D</span>6 posts; 90 m left over (990÷150=6 remainder 90).</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-3-3-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #3">Practice Question</div>
+      <div class="pq">A 5,000 m race has water stations every 750 m. How many stations fit before the finish?</div>
+      <div class="quiz-options" id="l4w-Lesson4-3-4-options" data-correct="6 stations; 500 m left over (5000÷750=6 remainder 500)."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-4')" data-value="5 stations; 1,250 m left over."><span class="quiz-letter">A</span>5 stations; 1,250 m left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-4')" data-value="6 stations; 250 m left over."><span class="quiz-letter">B</span>6 stations; 250 m left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-4')" data-value="6 stations; 500 m left over (5000÷750=6 remainder 500)."><span class="quiz-letter">C</span>6 stations; 500 m left over (5000÷750=6 remainder 500).</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-4')" data-value="7 stations; 0 m left over, rounding up."><span class="quiz-letter">D</span>7 stations; 0 m left over, rounding up.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-3-4-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #3">Practice Question</div>
+      <div class="pq">True or false: if a division leaves a remainder, you should place one more marker past the end of the trail to use up the leftover distance.</div>
+      <div class="quiz-options" id="l4w-Lesson4-3-5-options" data-correct="False — the leftover distance is too short for a full interval, so no extra marker fits there."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-5')" data-value="True — every remainder deserves one more marker."><span class="quiz-letter">A</span>True — every remainder deserves one more marker.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-3-5')" data-value="False — the leftover distance is too short for a full interval, so no extra marker fits there."><span class="quiz-letter">B</span>False — the leftover distance is too short for a full interval, so no extra marker fits there.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-3-5-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #5">Practice Question</div>
+      <div class="pq">220 campers ride buses that hold 45 each. How many buses are needed?</div>
+      <div class="quiz-options" id="l4w-Lesson4-5-1-options" data-correct="5 buses. Four buses hold 180 campers; the remaining 40 campers need a fifth bus."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-1')" data-value="5 buses. Four buses hold 180 campers; the remaining 40 campers need a fifth bus."><span class="quiz-letter">A</span>5 buses. Four buses hold 180 campers; the remaining 40 campers need a fifth bus.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-1')" data-value="4 buses. 220÷45 rounds down to 4."><span class="quiz-letter">B</span>4 buses. 220÷45 rounds down to 4.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-1')" data-value="6 buses, just to be safe."><span class="quiz-letter">C</span>6 buses, just to be safe.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-1')" data-value="5 buses, with 0 campers left over."><span class="quiz-letter">D</span>5 buses, with 0 campers left over.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-5-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #5">Practice Question</div>
+      <div class="pq">312 books are packed into boxes of 25. How many boxes are needed?</div>
+      <div class="quiz-options" id="l4w-Lesson4-5-2-options" data-correct="13 boxes. Twelve boxes hold 300 books; the remaining 12 books need a 13th box."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-2')" data-value="12 boxes. 312÷25 rounds down to 12."><span class="quiz-letter">A</span>12 boxes. 312÷25 rounds down to 12.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-2')" data-value="13 boxes, with 0 books left over."><span class="quiz-letter">B</span>13 boxes, with 0 books left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-2')" data-value="13 boxes. Twelve boxes hold 300 books; the remaining 12 books need a 13th box."><span class="quiz-letter">C</span>13 boxes. Twelve boxes hold 300 books; the remaining 12 books need a 13th box.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-2')" data-value="31 boxes, dividing by 10 instead of 25."><span class="quiz-letter">D</span>31 boxes, dividing by 10 instead of 25.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-5-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #5">Practice Question</div>
+      <div class="pq">500 people need elevator trips that hold 12 people each. How many trips move everyone?</div>
+      <div class="quiz-options" id="l4w-Lesson4-5-3-options" data-correct="42 trips. Forty-one trips carry 492 people; the remaining 8 people need one more trip."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-3')" data-value="50 trips, just to be safe."><span class="quiz-letter">A</span>50 trips, just to be safe.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-3')" data-value="42 trips. Forty-one trips carry 492 people; the remaining 8 people need one more trip."><span class="quiz-letter">B</span>42 trips. Forty-one trips carry 492 people; the remaining 8 people need one more trip.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-3')" data-value="42 trips, with 0 people left over."><span class="quiz-letter">C</span>42 trips, with 0 people left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-3')" data-value="41 trips. 500÷12 rounds down to 41."><span class="quiz-letter">D</span>41 trips. 500÷12 rounds down to 41.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-5-3-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #5">Practice Question</div>
+      <div class="pq">True or false: if a division comes out exactly even with no remainder, you still add one extra group.</div>
+      <div class="quiz-options" id="l4w-Lesson4-5-4-options" data-correct="False — you only add one more group when there's a leftover that still needs a place to go."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-4')" data-value="True — always add one extra group no matter what."><span class="quiz-letter">A</span>True — always add one extra group no matter what.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-4')" data-value="False — you only add one more group when there's a leftover that still needs a place to go."><span class="quiz-letter">B</span>False — you only add one more group when there's a leftover that still needs a place to go.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-5-4-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #5">Practice Question</div>
+      <div class="pq">163 chairs need to be stacked in stacks of 20. How many stacks hold every chair?</div>
+      <div class="quiz-options" id="l4w-Lesson4-5-5-options" data-correct="9 stacks. Eight stacks hold 160 chairs; the remaining 3 chairs need a 9th stack."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-5')" data-value="8 stacks. 163÷20 rounds down to 8."><span class="quiz-letter">A</span>8 stacks. 163÷20 rounds down to 8.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-5')" data-value="9 stacks, with 0 chairs left over."><span class="quiz-letter">B</span>9 stacks, with 0 chairs left over.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-5')" data-value="9 stacks. Eight stacks hold 160 chairs; the remaining 3 chairs need a 9th stack."><span class="quiz-letter">C</span>9 stacks. Eight stacks hold 160 chairs; the remaining 3 chairs need a 9th stack.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-5-5')" data-value="16 stacks, dividing by 10 instead of 20."><span class="quiz-letter">D</span>16 stacks, dividing by 10 instead of 20.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-5-5-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #19">Practice Question</div>
+      <div class="pq">In 7 + 12 = 19, which number is the sum?</div>
+      <div class="quiz-options" id="l4w-Lesson4-19-1-options" data-correct="19."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-1')" data-value="7."><span class="quiz-letter">A</span>7.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-1')" data-value="12."><span class="quiz-letter">B</span>12.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-1')" data-value="19."><span class="quiz-letter">C</span>19.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-1')" data-value="5."><span class="quiz-letter">D</span>5.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-19-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #19">Practice Question</div>
+      <div class="pq">In 30 − 18 = 12, which number is the difference?</div>
+      <div class="quiz-options" id="l4w-Lesson4-19-2-options" data-correct="12."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-2')" data-value="18."><span class="quiz-letter">A</span>18.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-2')" data-value="48."><span class="quiz-letter">B</span>48.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-2')" data-value="30."><span class="quiz-letter">C</span>30.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-2')" data-value="12."><span class="quiz-letter">D</span>12.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-19-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #19">Practice Question</div>
+      <div class="pq">Which word belongs to addition: sum or difference?</div>
+      <div class="quiz-options" id="l4w-Lesson4-19-3-options" data-correct="Sum."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-3')" data-value="Sum."><span class="quiz-letter">A</span>Sum.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-3')" data-value="Difference."><span class="quiz-letter">B</span>Difference.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-19-3-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #19">Practice Question</div>
+      <div class="pq">In 5 + 4 = 9, is 9 called the sum or an addend?</div>
+      <div class="quiz-options" id="l4w-Lesson4-19-4-options" data-correct="The sum — 5 and 4 are the addends."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-4')" data-value="The sum — 5 and 4 are the addends."><span class="quiz-letter">A</span>The sum — 5 and 4 are the addends.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-4')" data-value="An addend — 9 is one of the numbers being added."><span class="quiz-letter">B</span>An addend — 9 is one of the numbers being added.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-19-4-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #19">Practice Question</div>
+      <div class="pq">If 21 − 6 = 15, what do you get when you add 15 + 6, and what is that result called?</div>
+      <div class="quiz-options" id="l4w-Lesson4-19-5-options" data-correct="21, and it's called the sum (addition undoes subtraction)."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-5')" data-value="27, and it's called the sum."><span class="quiz-letter">A</span>27, and it's called the sum.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-5')" data-value="21, and it's called the sum (addition undoes subtraction)."><span class="quiz-letter">B</span>21, and it's called the sum (addition undoes subtraction).</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-5')" data-value="15, and it's called the difference."><span class="quiz-letter">C</span>15, and it's called the difference.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-19-5')" data-value="6, and it's called the addend."><span class="quiz-letter">D</span>6, and it's called the addend.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-19-5-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #21">Practice Question</div>
+      <div class="pq">Compare: 11 − 4 ○ 4 − 11.</div>
+      <div class="quiz-options" id="l4w-Lesson4-21-1-options" data-correct="7 > −7, so >."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-1')" data-value="−7 > 7, so >."><span class="quiz-letter">A</span>−7 > 7, so >.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-1')" data-value="7 > −7, so >."><span class="quiz-letter">B</span>7 > −7, so >.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-1')" data-value="7 = −7, so =."><span class="quiz-letter">C</span>7 = −7, so =.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-1')" data-value="7 < −7, so <."><span class="quiz-letter">D</span>7 < −7, so <.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-21-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #21">Practice Question</div>
+      <div class="pq">Compare: 6 − 14 ○ 14 − 6.</div>
+      <div class="quiz-options" id="l4w-Lesson4-21-2-options" data-correct="−8 < 8, so <."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-2')" data-value="−8 > 8, so >."><span class="quiz-letter">A</span>−8 > 8, so >.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-2')" data-value="8 < −8, so <."><span class="quiz-letter">B</span>8 < −8, so <.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-2')" data-value="8 = −8, so =."><span class="quiz-letter">C</span>8 = −8, so =.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-2')" data-value="−8 < 8, so <."><span class="quiz-letter">D</span>−8 < 8, so <.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-21-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #21">Practice Question</div>
+      <div class="pq">Compare: 25 − 10 ○ 10 − 25.</div>
+      <div class="quiz-options" id="l4w-Lesson4-21-3-options" data-correct="15 > −15, so >."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-3')" data-value="15 > −15, so >."><span class="quiz-letter">A</span>15 > −15, so >.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-3')" data-value="15 = −15, so =."><span class="quiz-letter">B</span>15 = −15, so =.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-3')" data-value="−15 > 15, so >."><span class="quiz-letter">C</span>−15 > 15, so >.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-3')" data-value="15 < −15, so <."><span class="quiz-letter">D</span>15 < −15, so <.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-21-3-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #21">Practice Question</div>
+      <div class="pq">True or false: a − b and b − a always give the same value.</div>
+      <div class="quiz-options" id="l4w-Lesson4-21-4-options" data-correct="False — they're opposites of each other unless a equals b."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-4')" data-value="False — they're opposites of each other unless a equals b."><span class="quiz-letter">A</span>False — they're opposites of each other unless a equals b.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-4')" data-value="True — order never matters in subtraction."><span class="quiz-letter">B</span>True — order never matters in subtraction.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-21-4-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #21">Practice Question</div>
+      <div class="pq">If a − b = 9, what is b − a?</div>
+      <div class="quiz-options" id="l4w-Lesson4-21-5-options" data-correct="−9 (b−a is always the opposite of a−b)."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-5')" data-value="18 (they add together)."><span class="quiz-letter">A</span>18 (they add together).</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-5')" data-value="0 (they cancel out)."><span class="quiz-letter">B</span>0 (they cancel out).</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-5')" data-value="−9 (b−a is always the opposite of a−b)."><span class="quiz-letter">C</span>−9 (b−a is always the opposite of a−b).</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-21-5')" data-value="9 (order doesn't matter)."><span class="quiz-letter">D</span>9 (order doesn't matter).</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-21-5-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #29">Practice Question</div>
+      <div class="pq">Is 0 a counting number, a whole number, or both a whole number and an integer?</div>
+      <div class="quiz-options" id="l4w-Lesson4-29-1-options" data-correct="Both a whole number and an integer (0 is not a counting number)."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-1')" data-value="Only a counting number."><span class="quiz-letter">A</span>Only a counting number.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-1')" data-value="Only a whole number, never an integer."><span class="quiz-letter">B</span>Only a whole number, never an integer.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-1')" data-value="Both a whole number and an integer (0 is not a counting number)."><span class="quiz-letter">C</span>Both a whole number and an integer (0 is not a counting number).</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-1')" data-value="None of the three."><span class="quiz-letter">D</span>None of the three.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-29-1-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #29">Practice Question</div>
+      <div class="pq">Which of these are integers but not counting numbers: −6, 0, 3, −1?</div>
+      <div class="quiz-options" id="l4w-Lesson4-29-2-options" data-correct="−6, 0, and −1 (3 is a counting number, and every counting number is also an integer)."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-2')" data-value="−6 and −1 only."><span class="quiz-letter">A</span>−6 and −1 only.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-2')" data-value="All four numbers."><span class="quiz-letter">B</span>All four numbers.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-2')" data-value="−6, 0, and −1 (3 is a counting number, and every counting number is also an integer)."><span class="quiz-letter">C</span>−6, 0, and −1 (3 is a counting number, and every counting number is also an integer).</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-2')" data-value="Only 3."><span class="quiz-letter">D</span>Only 3.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-29-2-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #29">Practice Question</div>
+      <div class="pq">True or false: every whole number is also an integer.</div>
+      <div class="quiz-options" id="l4w-Lesson4-29-3-options" data-correct="True."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-3')" data-value="True."><span class="quiz-letter">A</span>True.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-3')" data-value="False."><span class="quiz-letter">B</span>False.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-29-3-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #29">Practice Question</div>
+      <div class="pq">Is −10 a whole number?</div>
+      <div class="quiz-options" id="l4w-Lesson4-29-4-options" data-correct="No — whole numbers cannot be negative, but integers can."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-4')" data-value="Yes — whole numbers include all negative numbers too."><span class="quiz-letter">A</span>Yes — whole numbers include all negative numbers too.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-4')" data-value="No — whole numbers cannot be negative, but integers can."><span class="quiz-letter">B</span>No — whole numbers cannot be negative, but integers can.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-29-4-feedback"></div>
+    </div><div class="practice-card">
+      <div class="tag" data-source="Lesson 4 #29">Practice Question</div>
+      <div class="pq">Put these sets in order from smallest to largest: counting numbers, whole numbers, integers.</div>
+      <div class="quiz-options" id="l4w-Lesson4-29-5-options" data-correct="Counting numbers, then whole numbers, then integers (each set is contained inside the next)."><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-5')" data-value="Counting numbers, then whole numbers, then integers (each set is contained inside the next)."><span class="quiz-letter">A</span>Counting numbers, then whole numbers, then integers (each set is contained inside the next).</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-5')" data-value="They're all the same size."><span class="quiz-letter">B</span>They're all the same size.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-5')" data-value="Whole numbers, then counting numbers, then integers."><span class="quiz-letter">C</span>Whole numbers, then counting numbers, then integers.</button><button class="quiz-opt" onclick="selectOption(this,'l4w-Lesson4-29-5')" data-value="Integers, then whole numbers, then counting numbers."><span class="quiz-letter">D</span>Integers, then whole numbers, then counting numbers.</button></div>
+      <div class="quiz-feedback" id="l4w-Lesson4-29-5-feedback"></div>
+    </div></div>
+</section>
 <section class="section"><div class="kicker">One sentence to remember</div><h2>💜 For Sarah</h2>
 <div class="rule">You are already doing a lot of the math correctly. Your next superpower is slowing down long enough to answer <em>every part</em> of the question.</div>
 </section>
