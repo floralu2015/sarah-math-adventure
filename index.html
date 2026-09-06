@@ -56,12 +56,13 @@ main{max-width:1180px;margin:auto;padding:0 18px 70px}nav{position:sticky;top:6p
 
 
 .datepill{display:inline-block;padding:7px 11px;border:1px solid #ffffff70;border-radius:999px;background:#ffffff1c;font-weight:900}.plan{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.plan-card{padding:16px;border-radius:18px;background:#f7f2ff;border:2px solid #e5dcff}.plan-card strong{font-size:24px;color:#5b42c6}.question-cell{min-width:280px;font-weight:750;line-height:1.4}.tiny{font-size:13px;color:#677085}
-.day-tabs{position:sticky;top:0;z-index:40;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:12px 10px;background:#fffaf4ee;backdrop-filter:blur(8px);box-shadow:0 4px 14px #52627a18}.day-tab{border:2px solid var(--purple);background:#fff;color:#443177;padding:9px 18px;border-radius:999px;font-weight:900;cursor:pointer;font-size:14px}.day-tab.active{background:var(--purple);color:#fff}</style></head>
+.day-tabs{position:sticky;top:0;z-index:40;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;padding:12px 10px;background:#fffaf4ee;backdrop-filter:blur(8px);box-shadow:0 4px 14px #52627a18}.day-tab{border:2px solid var(--purple);background:#fff;color:#443177;padding:9px 18px;border-radius:999px;font-weight:900;cursor:pointer;font-size:14px}.day-tab.active{background:var(--purple);color:#fff}.quiz-frame-wrap{max-width:1180px;margin:0 auto;padding:0 10px 18px}.quiz-frame-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:10px 4px}.quiz-frame-bar .tiny{font-weight:800}.quiz-frame-bar a{background:var(--purple,#6246d9);color:#fff;text-decoration:none;padding:8px 14px;border-radius:999px;font-weight:900;font-size:13px}.quiz-frame{width:100%;height:calc(100vh - 130px);min-height:560px;border:2px solid #e9e2ff;border-radius:22px;background:#fff;box-shadow:0 10px 28px #52627a18;display:block}</style></head>
 <body>
 <div class="day-tabs">
   <button class="day-tab" data-day="aug24" onclick="showDay('aug24')">📅 Mon, Aug 24</button>
   <button class="day-tab" data-day="aug25" onclick="showDay('aug25')">📅 Tue, Aug 25 · Lesson 4</button>
   <button class="day-tab" data-day="sep1" onclick="showDay('sep1')">📅 Tue, Sep 1 · Lesson 6</button>
+  <button class="day-tab" data-day="quizzes" onclick="showDay('quizzes')">🧩 Section 1 · Leveled Quizzes</button>
 </div>
 <div class="day-page" data-day="aug24">
 <header><div class="hero"><div style="font-size:40px">➕➖✖️➗🧠✨</div><div style="font-weight:900;font-size:14px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;margin-bottom:6px">📅 Monday, August 24, 2026</div><h1>Sarah's Math Homework Adventure</h1>
@@ -1106,6 +1107,16 @@ shuffleGrid('l6-weekend-grid', 'Weekend Question');
 updateSummary('l6-today-grid');
 updateSummary('l6-weekend-grid');
 </script>
+<div class="day-page" data-day="quizzes">
+<div class="quiz-frame-wrap">
+  <div class="quiz-frame-bar">
+    <span class="tiny">🧩 Section 1 · 10 lessons × 3 levels of isolated practice quizzes</span>
+    <a href="section1-quizzes.html" target="_blank" rel="noopener">Open full screen ↗</a>
+  </div>
+  <iframe class="quiz-frame" src="section1-quizzes.html" title="Section 1 Leveled Isolated Quizzes" loading="lazy"></iframe>
+</div>
+</div>
+
 <script>
 function showDay(day, opts){
   opts = opts || {};
@@ -1114,14 +1125,15 @@ function showDay(day, opts){
   var titles = {
     aug24: "Sarah's Math Homework Adventure \u00b7 Aug 24",
     aug25: "Sarah's Math Homework Adventure \u00b7 Aug 25 (Lesson 4)",
-    sep1: "Sarah's Math Homework Adventure \u00b7 Sep 1 (Lesson 6)"
+    sep1: "Sarah's Math Homework Adventure \u00b7 Sep 1 (Lesson 6)",
+    quizzes: "Sarah's Math Adventure \u00b7 Section 1 Leveled Quizzes"
   };
   document.title = titles[day] || titles.aug24;
   if(!opts.keepHash) history.replaceState(null, '', '#' + day);
 }
 (function(){
   var h = location.hash.replace('#','');
-  if(h === 'aug24' || h === 'aug25' || h === 'sep1' || !h){
+  if(h === 'aug24' || h === 'aug25' || h === 'sep1' || h === 'quizzes' || !h){
     showDay(h || 'aug25');
   } else {
     var el = document.getElementById(h);
