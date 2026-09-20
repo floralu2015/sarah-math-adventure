@@ -65,6 +65,7 @@ main{max-width:1180px;margin:auto;padding:0 18px 70px}nav{position:sticky;top:6p
   <button class="day-tab" data-day="sep2" onclick="showDay('sep2')">📅 Wed, Sep 2 · Lesson 7</button>
   <button class="day-tab" data-day="sep3" onclick="showDay('sep3')">📅 Thu, Sep 3 · Lesson 8</button>
   <button class="day-tab" data-day="sep4" onclick="showDay('sep4')">📅 Fri, Sep 4 · Lesson 9</button>
+  <button class="day-tab" data-day="l1112" onclick="showDay('l1112')">📘 Lessons 11 & 12 · Test Review</button>
   <button class="day-tab" data-day="quizzes" onclick="showDay('quizzes')">🧩 Section 1 · Leveled Quizzes</button>
 </div>
 <div class="day-page" data-day="aug24">
@@ -1206,6 +1207,167 @@ shuffleGrid('l9-weekend-grid', 'Weekend Question');
 updateSummary('l9-today-grid');
 updateSummary('l9-weekend-grid');
 </script>
+<div class="day-page" data-day="l1112">
+<header><div class="hero"><div style="font-size:40px">➕➖✖️➗🧠✨</div><span class="datepill">Lessons 11 & 12 + Cumulative Test</span><h1>Sarah's Math Homework Adventure</h1><p>Built from Sarah's handwritten Lesson 11/12 work, the Saxon Course 3 material you uploaded, and her 90/100 cumulative test. The goal is the same as before: celebrate what is strong, repair only the weak spots, and practice them until they feel easy.</p></div></header>
+<main>
+<nav>
+<a href="#l1112-dashboard">Dashboard</a><a href="#l1112-test">Test Review</a><a href="#l1112-fix">Fix-It Zone</a><a href="#l1112-homework">Lesson 11/12</a><a href="#l1112-practice">Practice</a><a href="#l1112-weekend">Weekend</a>
+</nav>
+<div class="print-toolbar"><button onclick="window.print()">🖨️ Print worksheet</button><button onclick="showAnswers()">✅ Show all answers</button></div>
+
+<section class="section" id="l1112-dashboard">
+<div class="kicker">Latest dashboard</div><h2>🌟 Sarah's current picture</h2>
+<div class="today"><b>Cumulative test: 90/100.</b> Sarah is showing solid mastery of most Section 1 skills. The biggest value now is not re-teaching everything. It is tightening the few calculation and interpretation habits that caused lost points.</div>
+<div class="stats">
+<div class="stat"><strong>90%</strong><span>Cumulative test</span></div>
+<div class="stat"><strong>Strong</strong><span>Integers &amp; properties</span></div>
+<div class="stat"><strong>Strong</strong><span>Word problems</span></div>
+<div class="stat"><strong>Focus</strong><span>Precision in multi-step work</span></div>
+</div>
+<div class="insights">
+<div class="insight"><h3>🏆 Strong areas</h3><p>Ordering integers, whole-number sets, associative property, absolute value, solving a one-step equation, money multiplication, fractions of a group, and basic multi-step word problems.</p></div>
+<div class="insight warn"><h3>🎯 Main habits to strengthen</h3><p>Read every part, label units, estimate before dividing, and check whether the answer should be rounded, exact, or interpreted in context.</p></div>
+</div>
+<div class="rule">Sarah's new check: “What is the question asking me to find, and does my answer make sense?”</div>
+</section>
+
+<section class="section" id="l1112-test">
+<div class="kicker">Cumulative test</div><h2>🧠 What the 90/100 tells us</h2>
+<p>These are the concepts visible on the September 4 cumulative test. Most were correct. I am using the test as a diagnostic so practice stays targeted.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Skill</th><th>Example from test</th><th>Read</th></tr></thead>
+<tbody>
+<tr><td>Multiplication word problem</td><td>25 boxes × 12 hats</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Compare fractions</td><td>Order 3/4, 3/7, 3/5</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Fractional part</td><td>3/5 of 220</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Average rate</td><td>450 miles in 7 hours</td><td><span class="status partial">Review precision</span></td></tr>
+<tr><td>Capacity / round up</td><td>82 people, 32 per bus</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Time conversion</td><td>1.5 hours from 400 minutes</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Difference</td><td>785 total, 540 preregistered</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Equation interpretation</td><td>$20, $7.85 change</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Money multiplication</td><td>56 × $0.62</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Integers &amp; sets</td><td>Order integers; whole numbers</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Properties</td><td>Associative Property of Addition</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Absolute value</td><td>Two numbers with |x| = 6</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>One-step equation</td><td>5 + x = 40</td><td><span class="status correct">Strong</span></td></tr>
+<tr><td>Decimal division</td><td>$20.60 ÷ 16</td><td><span class="status incorrect">Needs extra care</span></td></tr>
+</tbody></table></div>
+</section>
+
+<section class="section" id="l1112-fix">
+<div class="kicker">Fix-It Zone</div><h2>🛠️ Slow, careful repairs</h2>
+
+<article class="fix-card">
+<div class="fix-top"><span>Average rate</span><span class="status partial">Review</span></div>
+<div class="full-question"><b>Problem:</b> Ajay drove 450 miles in 7 hours. Find the average speed, rounded to the nearest whole number.</div>
+<div class="fix-grid"><div class="wrong"><b>Common trap</b><br>Stopping at 64 without checking the decimal or rounding rule.</div><div class="right"><b>Complete reasoning</b><br>450 ÷ 7 = 64.285... → <b>64 mph</b>.</div></div>
+<div class="why">Step 1: Average speed means distance ÷ time. Step 2: Compute 450 ÷ 7. Step 3: Look at the tenths digit. Since 64.285... has a 2 in the tenths place, it rounds down to 64. Step 4: Add the unit, miles per hour.</div>
+</article>
+
+<article class="fix-card">
+<div class="fix-top"><span>Money division</span><span class="status incorrect">Focus</span></div>
+<div class="full-question"><b>Problem:</b> $20.60 ÷ 16.</div>
+<div class="fix-grid"><div class="wrong"><b>What makes it tricky</b><br>The decimal must stay aligned, and money answers need two decimal places.</div><div class="right"><b>Correct answer</b><br>$20.60 ÷ 16 = <b>$1.2875</b>, which is <b>$1.29</b> to the nearest cent.</div></div>
+<div class="why">Think first: 16 × $1 = $16, so the answer should be a little more than $1, not $12 or $0.12. Then divide carefully. Finally round to the nearest cent because money is normally reported to two decimal places.</div>
+</article>
+
+<article class="fix-card">
+<div class="fix-top"><span>Context + remainder</span><span class="status correct">Keep strong</span></div>
+<div class="full-question"><b>Example:</b> 82 people need buses that hold 32 people each.</div>
+<div class="fix-grid"><div class="wrong"><b>Incomplete interpretation</b><br>82 ÷ 32 = 2 remainder 18, so “2 buses.”</div><div class="right"><b>Correct interpretation</b><br><b>3 buses</b>, because the remaining 18 people still need a bus.</div></div>
+<div class="why">Sarah got this kind of problem right. Keep the habit: the remainder changes meaning depending on the story.</div>
+</article>
+</section>
+
+<section class="section" id="l1112-homework">
+<div class="kicker">Lessons 11 & 12</div><h2>📘 Homework skills from Sarah's page</h2>
+<p class="tiny">Sarah's notebook page contains both Lesson 11 and Lesson 12 work. Some original textbook wording is not visible in the photo, so this section organizes the actual skills and answers shown on her page instead of pretending uncertain wording is exact.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Notebook item</th><th>Visible work / answer</th><th>Skill</th><th>What to remember</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>4 boxes</td><td>Division / grouping</td><td>Decide whether the remainder changes the number of groups.</td></tr>
+<tr><td>3</td><td>101.95</td><td>Decimal arithmetic</td><td>Line up decimal points vertically.</td></tr>
+<tr><td>5</td><td>Common multiple</td><td>Number sense / multiples</td><td>A common multiple belongs to the multiple lists of two or more numbers.</td></tr>
+<tr><td>9</td><td>96 m²</td><td>Area</td><td>Area uses square units.</td></tr>
+<tr><td>11</td><td>32, 48, 64</td><td>Pattern / multiples</td><td>Check the rule from one term to the next.</td></tr>
+<tr><td>13</td><td>105 people</td><td>Multiplication word problem</td><td>Label the result with people.</td></tr>
+<tr><td>17</td><td>13,200</td><td>Multiplication / place value</td><td>Estimate magnitude before finalizing.</td></tr>
+<tr><td>19</td><td>$40.14</td><td>Money / decimal operations</td><td>Use two decimal places for dollars and cents.</td></tr>
+<tr><td>21</td><td>5, 2</td><td>Ordered values / coordinates or set notation</td><td>Preserve order when order matters.</td></tr>
+<tr><td>23</td><td>−12, −5, 0, 11, 13</td><td>Ordering integers</td><td>Farther left on the number line means smaller.</td></tr>
+<tr><td>25</td><td>12</td><td>Whole-number computation</td><td>Check with the inverse operation when possible.</td></tr>
+<tr><td>27</td><td>12</td><td>Computation</td><td>Show one clean line per operation.</td></tr>
+<tr><td>29</td><td>45 km</td><td>Rate / distance</td><td>Distance = rate × time.</td></tr>
+</tbody></table></div>
+</section>
+
+<section class="section" id="l1112-practice">
+<div class="kicker">Today's targeted practice</div><h2>🎮 9 interactive questions</h2>
+<p>These focus on the few habits most worth strengthening: average rate, money decimals, units, and interpreting remainders.</p>
+<div class="practice-grid" id="l1112-grid">
+<div class="practice-card"><div class="tag">Average rate</div><div class="pq">A car travels 525 miles in 8 hours. About how many miles per hour, to the nearest whole number?</div><div class="quiz-options" data-answer="66"><button class="quiz-opt">65</button><button class="quiz-opt">66</button><button class="quiz-opt">67</button><button class="quiz-opt">4200</button></div><div class="feedback"></div></div>
+<div class="practice-card"><div class="tag">Money division</div><div class="pq">$31.20 is shared equally by 16 students. How much per student?</div><div class="quiz-options" data-answer="$1.95"><button class="quiz-opt">$1.95</button><button class="quiz-opt">$19.50</button><button class="quiz-opt">$0.195</button><button class="quiz-opt">$2.05</button></div><div class="feedback"></div></div>
+<div class="practice-card"><div class="tag">Remainder meaning</div><div class="pq">95 students ride buses that hold 24 students each. How many buses are needed?</div><div class="quiz-options" data-answer="4"><button class="quiz-opt">3</button><button class="quiz-opt">4</button><button class="quiz-opt">5</button><button class="quiz-opt">23</button></div><div class="feedback"></div></div>
+<div class="practice-card"><div class="tag">Area units</div><div class="pq">A rectangle is 12 m by 8 m. What is its area?</div><div class="quiz-options" data-answer="96 m²"><button class="quiz-opt">20 m</button><button class="quiz-opt">40 m</button><button class="quiz-opt">96 m²</button><button class="quiz-opt">96 m</button></div><div class="feedback"></div></div>
+<div class="practice-card"><div class="tag">Money multiplication</div><div class="pq">43 tickets cost $0.75 each. What is the total?</div><div class="quiz-options" data-answer="$32.25"><button class="quiz-opt">$31.25</button><button class="quiz-opt">$32.25</button><button class="quiz-opt">$32.75</button><button class="quiz-opt">$322.50</button></div><div class="feedback"></div></div>
+<div class="practice-card"><div class="tag">Integers</div><div class="pq">Which list is least to greatest?</div><div class="quiz-options" data-answer="−9, −2, 0, 4, 11"><button class="quiz-opt">−9, −2, 0, 4, 11</button><button class="quiz-opt">11, 4, 0, −2, −9</button><button class="quiz-opt">−2, −9, 0, 4, 11</button><button class="quiz-opt">0, −2, −9, 4, 11</button></div><div class="feedback"></div></div>
+<div class="practice-card"><div class="tag">Fractional part</div><div class="pq">What is 3/5 of 180?</div><div class="quiz-options" data-answer="108"><button class="quiz-opt">60</button><button class="quiz-opt">90</button><button class="quiz-opt">108</button><button class="quiz-opt">300</button></div><div class="feedback"></div></div>
+<div class="practice-card"><div class="tag">Time conversion</div><div class="pq">A plan has 360 minutes. You use 1.5 hours. How many minutes remain?</div><div class="quiz-options" data-answer="270"><button class="quiz-opt">90</button><button class="quiz-opt">210</button><button class="quiz-opt">270</button><button class="quiz-opt">358.5</button></div><div class="feedback"></div></div>
+<div class="practice-card"><div class="tag">Equation</div><div class="pq">Solve: x + 18 = 53</div><div class="quiz-options" data-answer="35"><button class="quiz-opt">25</button><button class="quiz-opt">35</button><button class="quiz-opt">71</button><button class="quiz-opt">954</button></div><div class="feedback"></div></div>
+</div>
+</section>
+
+<section class="section" id="l1112-weekend">
+<div class="kicker">Weekend reinforcement</div><h2>🌈 5 short problems</h2>
+<ol>
+<li>A runner travels 390 meters in 6 minutes. What is the average rate in meters per minute?</li>
+<li>$18.90 is divided equally among 12 people. What is each person's share to the nearest cent?</li>
+<li>67 students need vans that hold 8 students each. How many vans are needed?</li>
+<li>A floor is 14 ft by 9 ft. Give its area with the correct unit.</li>
+<li>Arrange from least to greatest: 6, −3, 0, −8, 2.</li>
+</ol>
+<button class="action" onclick="document.getElementById('l1112-wk').style.display='block'">Show weekend answers</button>
+<div id="l1112-wk" style="display:none;margin-top:12px;background:#edfff6;padding:14px;border-radius:14px;font-weight:800">1) 65 m/min &nbsp; 2) $1.58 &nbsp; 3) 9 vans &nbsp; 4) 126 ft² &nbsp; 5) −8, −3, 0, 2, 6</div>
+</section>
+
+<section class="section">
+<div class="kicker">Parent guide</div><h2>💜 How to use this with Sarah</h2>
+<p>Have Sarah do the Fix-It Zone slowly, then only the nine targeted questions. Ask her to say the unit out loud before writing the final answer. If she misses a question, have her explain what the problem is asking before doing any arithmetic. This keeps the work focused and avoids turning a 90% test into unnecessary over-practice.</p>
+</section>
+</main>
+<script>
+(function(){
+  var root = document.querySelector('.day-page[data-day="l1112"]');
+  root.querySelectorAll('.quiz-options').forEach(function(group){
+    group.querySelectorAll('.quiz-opt').forEach(function(btn){
+      btn.addEventListener('click',function(){
+        if(group.dataset.done) return;
+        group.dataset.done='1';
+        var answer=group.dataset.answer;
+        var feedback=group.parentElement.querySelector('.feedback');
+        group.querySelectorAll('.quiz-opt').forEach(function(b){
+          if(b.textContent.trim()===answer) b.classList.add('correct');
+        });
+        if(btn.textContent.trim()===answer){
+          feedback.textContent='✅ Correct! Nice work.';
+        }else{
+          btn.classList.add('incorrect');
+          feedback.textContent='🔎 Review this one. Correct answer: '+answer;
+        }
+      });
+    });
+  });
+  window.showAnswers = function(){
+    root.querySelectorAll('.quiz-options').forEach(function(group){
+      var a=group.dataset.answer;
+      group.querySelectorAll('.quiz-opt').forEach(function(b){ if(b.textContent.trim()===a) b.classList.add('correct'); });
+      var f=group.parentElement.querySelector('.feedback'); if(f) f.textContent='Answer: '+a;
+    });
+    document.getElementById('l1112-wk').style.display='block';
+  };
+})();
+</script>
+</div>
 <div class="day-page" data-day="quizzes">
 <div class="quiz-frame-wrap">
   <div class="quiz-frame-bar">
@@ -1228,6 +1390,7 @@ function showDay(day, opts){
     sep2: "Sarah's Math Homework Adventure \u00b7 Sep 2 (Lesson 7)",
     sep3: "Sarah's Math Homework Adventure \u00b7 Sep 3 (Lesson 8)",
     sep4: "Sarah's Math Homework Adventure \u00b7 Sep 4 (Lesson 9)",
+    l1112: "Sarah's Math Homework Adventure \u00b7 Lessons 11 & 12 + Test Review",
     quizzes: "Sarah's Math Adventure \u00b7 Section 1 Leveled Quizzes"
   };
   document.title = titles[day] || titles.aug24;
@@ -1235,7 +1398,7 @@ function showDay(day, opts){
 }
 (function(){
   var h = location.hash.replace('#','');
-  if(h === 'aug24' || h === 'aug25' || h === 'sep1' || h === 'sep2' || h === 'sep3' || h === 'sep4' || h === 'quizzes' || !h){
+  if(h === 'aug24' || h === 'aug25' || h === 'sep1' || h === 'sep2' || h === 'sep3' || h === 'sep4' || h === 'l1112' || h === 'quizzes' || !h){
     showDay(h || 'aug25');
   } else {
     var el = document.getElementById(h);
